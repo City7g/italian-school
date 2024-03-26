@@ -1,8 +1,12 @@
 .index-blog {
-  padding: 100px 0 75px;
+  padding: 75px 0 100px;
 
   @media (min-width: 768px) {
-    padding: 150px 0 125px;
+    padding: 100px 0 75px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 150px 0 100px;
   }
 }
 
