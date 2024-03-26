@@ -1,0 +1,11 @@
+section.media-video.media-video--bg
+  .container
+    .media-video__header
+      h2.title-h2.media-video__title О итальянском языке
+      p.text-p2.media-video__text Studia.it предлагает новый подход к изучению итальянского языка!
+
+    .media-video__list
+      each item in [6, 7, 8]
+        +card-video(item)
+
+    button.btn.btn--outline.media-video__btn Смотреть больше

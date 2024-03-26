@@ -1,0 +1,11 @@
+section.media-video
+  .container
+    .media-video__header
+      h2.title-h2.media-video__title О итальянской кухне
+      p.text-p2.media-video__text Studia.it предлагает новый подход к изучению итальянского языка!
+
+    .media-video__list
+      each item in [3, 4, 5]
+        +card-video(item)
+
+    button.btn.btn--outline.media-video__btn Смотреть больше
