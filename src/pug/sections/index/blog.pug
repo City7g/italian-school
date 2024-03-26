@@ -1,0 +1,10 @@
+- const blogs = [{ name: '#Италия', img: 'italia' }, { name: '#Язык', img: 'lang' }, { name: '#Обучение', img: 'teaching' }]
+
+section.index-blog
+  .container
+    a(href="/blog.html").index-blog__title-link
+      h2.title-h1.index-blog__title Блог
+        i.icon-ArrowRight.index-blog__title-icon
+    .index-blog__list
+      each blog in blogs
+        +card-blog(blog.name, blog.img)
