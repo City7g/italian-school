@@ -1,0 +1,6 @@
+- const tabs = ['Италия', 'Язык', 'Обучение']
+
+mixin tabs
+  .tabs&attributes(attributes)
+    each tab in tabs
+      .title-h2.tabs__item(class=`${tab === 'Италия' && 'active'}`)= tab

@@ -1,0 +1,7 @@
+section.blog-list
+  .container
+    .blog-list__tabs
+      +tabs
+    .blog-list__list
+      - for (var x = 1; x < 7; x++)
+        +card-article(x)

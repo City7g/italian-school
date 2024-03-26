@@ -1,0 +1,17 @@
+.tabs {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 200px));
+  gap: 30px;
+  text-align: center;
+}
+
+.tabs__item {
+  transition: 0.3s all ease;
+  cursor: pointer;
+}
+
+.tabs__item.active,
+.tabs__item:hover {
+  color: $secondary;
+}

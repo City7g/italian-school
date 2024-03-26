@@ -54,4 +54,8 @@
 
 .section__img {
   display: block;
+
+  @media (max-width: 767px) {
+    margin: 0 auto;
+  }
 }
