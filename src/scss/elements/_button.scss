@@ -39,7 +39,8 @@
   }
 
   @media (min-width: 1200px) {
-    padding: 12px 40px;
+    padding: 12px 30px;
+    font-size: 16px;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -69,8 +70,8 @@
 }
 
 .btn--outline {
-  background-color: transparent;
   color: $primary;
+  background-color: transparent;
 
   &:hover {
     color: $white;
@@ -92,8 +93,8 @@
 }
 
 .btn--outline.btn--secondary {
-  border-color: $secondary;
   color: $secondary;
+  border-color: $secondary;
 
   &:hover {
     color: $white;
@@ -102,6 +103,18 @@
   &:disabled {
     color: rgba($secondary, 0.3);
     border-color: rgba($secondary, 0.3);
+    background-color: transparent;
+  }
+}
+
+.btn--transparent {
+  color: $black;
+  border-color: $black;
+  background-color: transparent;
+
+  &:hover {
+    color: $primary;
+    border-color: $primary;
     background-color: transparent;
   }
 }

@@ -1,3 +1,4 @@
+- const links = [{ name: 'Обучение', path: '/training' }, { name: 'Материалы', path: '/materials' }, { name: 'Грамматика', path: '/grammar' }, { name: 'Медиатека', path: '/media' }, { name: 'Презентации', path: '/presentations' }, { name: 'Блог', path: '/blog' }, { name: 'О нас', path: '/about' }]
 
 header.header
   include ../components/logo
@@ -7,16 +8,14 @@ header.header
 
       nav.header__menu
         ul.header__menu-list
-          li.header__menu-item
-            a.header__menu-link(href='/') Home
-          li.header__menu-item
-            a.header__menu-link(href='/about.html') About
+          each link in links
+            li.header__menu-item
+              a.header__menu-link(href=`${link.path}`)= link.name
           if (mode === 'development')
             li.header__menu-item
               a.header__menu-link(href='/ui.html') UI
-        button.btn.header-btn.header__btn
-          i.icon-User.btn__icon
-          | Sign Up
+        button.btn.btn--transparent.header__btn Войти
+        button.btn.header__btn Регистрация
 
       button.burger.header__burger(aria-label='Menu')
         span

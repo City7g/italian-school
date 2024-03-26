@@ -80,15 +80,15 @@
 }
 
 .ui__color {
-  flex-grow: 1;
   display: flex;
+  flex-grow: 1;
   justify-content: space-between;
   align-items: flex-end;
   gap: 12px;
   height: 120px;
+  padding: 10px;
   border-radius: 26px;
   background: white;
-  padding: 10px;
 
   @media (min-width: 1200px) {
     height: 150px;
