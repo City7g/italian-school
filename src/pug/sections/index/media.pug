@@ -1,8 +1,6 @@
 section.index-media
   .container
-    a(href="/grammar.html").index-media__title-link
-      h2.title-h1.index-media__title Медиатека
-        i.icon-ArrowRight.index-media__title-icon
+    +title-link('Медиатека', 'media').index-media__title
     p.text-p2.index-media__text Наша подборка полезных видео для обучения
     .index-media__list
       - for (var x = 1; x < 4; x++)

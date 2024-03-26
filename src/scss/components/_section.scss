@@ -1,8 +1,8 @@
 .section {
-  padding: 30px 0;
+  padding: 40px 0;
 
   @media (min-width: 768px) {
-    padding: 40px 0;
+    padding: 60px 0;
   }
 
   @media (min-width: 1200px) {
@@ -14,19 +14,24 @@
   background-color: $bg;
 }
 
+.section__slider {
+  max-width: 400px;
+}
+
 .section__wrap {
   display: grid;
   align-items: center;
+  grid-template-columns: minmax(200px, 100%);
   gap: 50px 30px;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(100px, 50%));
     gap: 40px;
   }
 }
 
 .section__content {
-  @media (max-width: 1199px) {
+  @media (max-width: 767px) {
     order: -1;
   }
 }

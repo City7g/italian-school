@@ -2,9 +2,7 @@
 
 section.index-grammar
   .container
-    a(href="/grammar.html").index-grammar__title-link
-      h2.title-h1.index-grammar__title Грамматика
-        i.icon-ArrowRight.index-grammar__title-icon
+    +title-link('Грамматика', 'grammar').index-grammar__title
     .index-grammar__list
       each grammar in grammars
         +card-grammar(grammar.title, grammar.text, grammar.level)

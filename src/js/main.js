@@ -1,3 +1,18 @@
+import Swiper from 'swiper'
+import { Navigation } from 'swiper/modules'
+
+const slider = document.querySelector('.slider__main')
+
+if (slider) {
+  const swiper = new Swiper(slider, {
+    modules: [Navigation],
+    navigation: {
+      prevEl: '.slider__prev',
+      nextEl: '.slider__next',
+    },
+  })
+}
+
 const burger = document.querySelector('.ui .burger')
 if (burger) {
   burger.addEventListener('click', e => {

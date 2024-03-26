@@ -1,0 +1,16 @@
+mixin slider(text = false, smallText = false)
+  .slider
+    .slider__main.swiper
+      .swiper-wrapper
+        - for (var x = 0; x < 4; x++)
+          .slider__item.swiper-slide
+            img.slider__img(src="/img/slider.svg" alt="")
+      .slider__navigation
+        .slider__prev.swiper-button-prev
+          i.icon-ArrowLeft.slider__prev-icon
+        .slider__next.swiper-button-next
+          i.icon-ArrowRight.slider__next-icon
+    if (text)
+      h3.title-h2.slider__text Итальянская грамматика наглядно и доступно
+    if (smallText)
+      p.text-p2.slider__small-text Итальянская грамматика наглядно и доступно

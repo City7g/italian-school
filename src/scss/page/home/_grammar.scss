@@ -6,36 +6,6 @@
   }
 }
 
-.index-grammar__title-link {
-  display: block;
-  max-width: max-content;
-}
-
-.index-grammar__title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  transition: 0.3s color ease;
-  margin-bottom: 30px;
-
-  @media (min-width: 1200px) {
-    margin-bottom: 50px;
-    gap: 24px;
-  }
-
-  &:hover {
-    color: $secondary;
-  }
-}
-
-.index-grammar__title-icon {
-  transition: 0.3s all ease;
-}
-
-.index-grammar__title:hover .index-grammar__title-icon {
-  transform: translateX(5px);
-}
-
 .index-grammar__list {
   display: grid;
   gap: 10px;

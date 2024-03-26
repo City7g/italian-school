@@ -10,36 +10,6 @@
   }
 }
 
-.index-blog__title-link {
-  display: block;
-  max-width: max-content;
-}
-
-.index-blog__title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  transition: 0.3s color ease;
-  margin-bottom: 30px;
-
-  @media (min-width: 1200px) {
-    margin-bottom: 50px;
-    gap: 24px;
-  }
-
-  &:hover {
-    color: $secondary;
-  }
-}
-
-.index-blog__title-icon {
-  transition: 0.3s all ease;
-}
-
-.index-blog__title:hover .index-blog__title-icon {
-  transform: translateX(5px);
-}
-
 .index-blog__list {
   display: grid;
   gap: 10px;
