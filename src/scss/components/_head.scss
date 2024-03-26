@@ -1,0 +1,33 @@
+.head {
+  overflow: hidden;
+  height: 100px;
+
+  @media (min-width: 576px) {
+    height: 150px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 175px;
+  }
+
+  @media (min-width: 1440px) {
+    height: 225px;
+  }
+
+  @media (min-width: 1600px) {
+    height: 250px;
+  }
+
+  @media (min-width: 1900px) {
+    height: auto;
+  }
+}
+
+.head__img {
+  max-width: none;
+  height: 100%;
+
+  @media (min-width: 1900px) {
+    width: 100%;
+  }
+}
