@@ -10,7 +10,7 @@ header.header
         ul.header__menu-list
           each link in links
             li.header__menu-item
-              a.header__menu-link(href=`${link.path}`)= link.name
+              a.header__menu-link(href=`${link.path}.html`)= link.name
           if (mode === 'development')
             li.header__menu-item
               a.header__menu-link(href='/ui.html') UI

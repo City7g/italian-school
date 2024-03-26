@@ -1,0 +1,10 @@
+mixin grammar(title, text, level)
+  .grammar
+    img.grammar__img(src=`/img/grammar/${level}.svg` alt="")
+    h3.title-h2.grammar__title= title
+    p.text-p2.grammar__text= text
+    a(href="#").text-p2.grammar__link
+      | Смотреть материалы
+      .icon-ArrowRight.grammar__link-icon
+    a(href="#").grammar__arrow
+      .icon-ArrowRight.grammar__arrow-icon
