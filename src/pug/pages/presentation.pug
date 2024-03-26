@@ -1,0 +1,9 @@
+extends ../layouts/main
+
+block variables
+  - const title = 'Presentation' 
+
+block content
+  +head('presentation')
+  include ../sections/presentation/first
+  include ../sections/presentation/list
