@@ -10,6 +10,24 @@
   }
 }
 
+.index-media__title {
+  margin-bottom: 3px;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 8px;
+    margin-left: 30px;
+  }
+}
+
+.index-media__text {
+  margin-bottom: 30px;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 50px;
+    margin-left: 30px;
+  }
+}
+
 .index-media__list {
   display: grid;
   gap: 10px;

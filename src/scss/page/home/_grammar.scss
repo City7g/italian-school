@@ -6,6 +6,15 @@
   }
 }
 
+.index-grammar__title {
+  margin-bottom: 30px;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 50px;
+    margin-left: 30px;
+  }
+}
+
 .index-grammar__list {
   display: grid;
   gap: 10px;

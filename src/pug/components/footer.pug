@@ -1,29 +1,18 @@
+- const footerLinks = [{ name: 'Обучение', path: '/training' }, { name: 'Блог', path: '/blog' }, { name: 'Материалы', path: '/material' }, { name: 'О школе', path: '/about' }, { name: 'Подход к обучению', path: '/about' }, { name: 'Личный кабинет', path: '/' }, { name: 'Вход / Регистрация', path: '/' }]
+
 footer.footer
   .container
     .footer__wrap
       .footer__first
         +logo.footer__logo
-        p.text-p2.footer__text
-          | Join our community
-        .footer__socials
-          a(href="#" aria-label='Discort link').footer__social
-            i.icon-DiscordLogo 
-          a(href="#" aria-label='Youtube link').footer__social
-            i.icon-YoutubeLogo 
-          a(href="#" aria-label='Instagram link').footer__social
-            i.icon-InstagramLogo 
 
-      .footer__second
-        h4.title-h5.footer__title Explore
-        .footer__links
-          a.text-p2.footer__link(href="/") Home
-          a.text-p2.footer__link(href="/about.html") About
-          a.text-p2.footer__link(href="/ui.html") UI
+      nav.footer__menu
+        ul.footer__menu-list
+          each link in footerLinks
+            li.footer__menu-item
+              a.text-p2.footer__menu-link(href=`${link.path}`)= link.name
 
-      .footer__third
-        h4.title-h5.footer__title Join our weekly digest
-        p.text-main.footer__text
-          | Get exclusive promotions & updates straight to your inbox.
+      button.btn.btn--secondary.btn--outline.footer__btn Написать нам
 
     p.text-p3.footer__copy
       | Ⓒ Start template. Use this template freely.
