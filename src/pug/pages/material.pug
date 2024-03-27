@@ -1,0 +1,9 @@
+extends ../layouts/main
+
+block variables
+  - const title = 'Material' 
+
+block content
+  +head('material')
+  include ../sections/material/first
+  include ../sections/material/level

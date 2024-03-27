@@ -1,0 +1,7 @@
+- const grammars = [{ title: 'А1 - Начало', text: 'Уровень выживания. Необходимый минимум.', level: 'a1' }, { title: 'А2 - Общение на бытовые темы.', text: 'Требуется для получения вида на жительство (permesso di soggiorno).', level: 'a2' }, { title: 'B1 - Обсуждение серьёзных тем.', text: 'Чтение простых книг. Требуется для получения гражданства.', level: 'b1' }, { title: 'В2 -  Заковыристая грамматика.', text: 'Требуется для  обучения в университетах.', level: 'b2' }]
+
+section.material-level
+  .container
+    .material-level__list
+      each grammar in grammars
+        +card-grammar(grammar.title, grammar.text, grammar.level)

@@ -1,0 +1,25 @@
+.material-level {
+  padding: 20px 0 40px;
+
+  @media (min-width: 768px) {
+    padding: 20px 0 60px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 40px 0 80px;
+  }
+}
+
+.material-level__list {
+  display: grid;
+  gap: 10px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  @media (min-width: 1200px) {
+    gap: 20px;
+  }
+}
