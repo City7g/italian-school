@@ -1,4 +1,4 @@
-.media-video {
+.media-videos {
   padding: 30px 0 50px;
 
   @media (min-width: 1200px) {
@@ -6,11 +6,11 @@
   }
 }
 
-.media-video--bg {
+.media-videos--bg {
   background-color: $bg;
 }
 
-.media-video__header {
+.media-videos__header {
   margin-bottom: 15px;
   margin-left: 15px;
 
@@ -20,7 +20,7 @@
   }
 }
 
-.media-video__title {
+.media-videos__title {
   margin-bottom: 8px;
 
   @media (min-width: 1200px) {
@@ -28,7 +28,7 @@
   }
 }
 
-.media-video__list {
+.media-videos__list {
   display: grid;
   gap: 25px;
 
@@ -41,7 +41,7 @@
   }
 }
 
-.media-video__btn {
+.media-videos__btn {
   margin-top: 15px;
 
   @media (min-width: 1200px) {
