@@ -1,14 +1,14 @@
 .tabs {
   display: grid;
-  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(80px, 200px));
+  justify-content: center;
   gap: 30px;
   text-align: center;
 }
 
 .tabs__item {
-  transition: 0.3s all ease;
   cursor: pointer;
+  transition: 0.3s all ease;
 }
 
 .tabs__item.active,

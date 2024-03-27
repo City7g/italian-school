@@ -1,6 +1,6 @@
 .head {
-  overflow: hidden;
   height: 100px;
+  overflow: hidden;
 
   @media (min-width: 576px) {
     height: 150px;
@@ -24,8 +24,8 @@
 }
 
 .head__img {
-  max-width: none;
   height: 100%;
+  max-width: none;
 
   @media (min-width: 1900px) {
     width: 100%;

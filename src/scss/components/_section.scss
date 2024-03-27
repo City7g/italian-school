@@ -20,8 +20,8 @@
 
 .section__wrap {
   display: grid;
-  align-items: center;
   grid-template-columns: minmax(200px, 100%);
+  align-items: center;
   gap: 50px 30px;
 
   @media (min-width: 768px) {
