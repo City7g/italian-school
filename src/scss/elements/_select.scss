@@ -1,23 +1,26 @@
 select {
   display: block;
-
   width: 100%;
-  padding: 6px 36px 6px 12px;
-
+  padding: 14px 70px 14px 50px;
   font-size: 16px;
-  line-height: 1.5;
-
-  border: 1px solid #dee2e6;
-  border-radius: 6px;
+  line-height: 1.3;
+  font-weight: 700;
+  border: 1px solid $text;
+  border-radius: $radius;
   background-color: #fff;
-  background-image: url('/img/arrow.svg');
+  background-image: url('/img/select-arrow.svg');
   background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 16px 12px;
+  background-position: right 50px center;
+  background-size: 11px 6px;
   appearance: none;
 
+  @media (min-width: 768px) {
+    background-position: right 20px center;
+    padding: 14px 35px 14px 20px;
+  }
+
   &:focus-visible {
-    border: 1px solid #0d6efd;
+    border: 1px solid $primary;
     outline: none;
     box-shadow: 0 0 0 4px rgba($primary, 0.25);
   }
