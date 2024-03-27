@@ -1,0 +1,23 @@
+section.treaning-test
+  .container
+    .treaning-test__wrap
+      .treaning-test__image
+        img.treaning-test__img(src="/img/illustration/index-next.svg" alt="")
+
+      .treaning-test__content
+        .treaning-test__header
+          h1.title-h2.treaning-test__title Тест на знание Итальянского
+          p.text-p1.treaning-test__number 1 / 10
+
+        .treaning-test__question
+          img(src="/img/count/item-1.svg" alt="")
+          p.text-p2.treaning-test__text Dolor aute enim pariatur veniam adipisicing laborum sunt reprehenderit?
+
+        .treaning-test__answers
+          - for (var x = 0; x < 3; x++)
+            label.treaning-test__answer
+              input.treaning-test__answer-input(type="radio" name="first")
+              p.text-p2.treaning-test__answer-text Dolor aute enim pariatur veniam 
+
+        .treaning-test__footer
+          button.btn.btn--secondary.treaning-test__text Продолжить
