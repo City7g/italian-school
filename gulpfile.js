@@ -28,7 +28,7 @@ const browserSync = () => {
       ready: function (err, bs) {
         bs.addMiddleware('*', function (req, res) {
           res.writeHead(302, {
-            location: 'error.html',
+            location: 'error',
           })
           res.end('Redirecting!')
         })

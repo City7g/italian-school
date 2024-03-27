@@ -11,16 +11,16 @@
 }
 
 .media-like__title {
-  padding-left: 20px;
   margin-bottom: 15px;
+  padding-left: 20px;
 
   @media (min-width: 768px) {
     padding-left: 25px;
   }
 
   @media (min-width: 1200px) {
-    padding-left: 40px;
     margin-bottom: 40px;
+    padding-left: 40px;
   }
 }
 

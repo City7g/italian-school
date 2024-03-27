@@ -4,6 +4,10 @@ block variables
   - const title = 'Error page' 
 
 block content
-  section.section-base
-    .container
-      h1.title-h1 Error
+  section.section-error
+    .section-error__image
+      img.section-error__img(src="/img/illustration/error.svg" alt="")
+    .section-error__content
+      h1.title-h1.section-error__title 404
+      p.text-p2.section-error__text Страница не найдена
+      button.btn.btn--transparent.section-error__btn На главную

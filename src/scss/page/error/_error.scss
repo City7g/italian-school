@@ -1,0 +1,45 @@
+.section-error {
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+  }
+
+  @media (min-width: 1200px) {
+    gap: 50px;
+    padding: 80px 40px;
+  }
+}
+
+.section-error__content {
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.section-error__title {
+  margin-bottom: 10px;
+  color: $text;
+
+  @media (min-width: 1200px) {
+    font-size: 60px;
+  }
+}
+
+.section-error__btn {
+  margin-top: 15px;
+
+  @media (min-width: 1200px) {
+    margin-top: 30px;
+  }
+}
+
+.section-error__img {
+  display: block;
+}

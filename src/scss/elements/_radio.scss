@@ -3,9 +3,9 @@ input[type='radio'] {
   width: 18px;
   height: 18px;
   border-radius: 50%;
+  background-color: rgba($secondary, 0.3);
   appearance: none;
   transition: 0.3s ease;
-  background-color: rgba($secondary, 0.3);
 
   &:focus:not(:disabled),
   &:active:not(:disabled) {
