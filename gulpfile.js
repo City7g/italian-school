@@ -17,7 +17,10 @@ browsersync.create()
 const browserSync = () => {
   browsersync.init({
     server: {
-      baseDir: './dist/',
+      baseDir: './dist',
+      serveStaticOptions: {
+        extensions: ['html'],
+      },
     },
     notify: false,
     open: false,
@@ -38,7 +41,7 @@ const browserSync = () => {
 
 const html = () => {
   return gulp
-    .src('./src/pug/pages/*.pug')
+    .src('./src/pug/pages/**/*.pug')
     .pipe(
       pug({
         data: {
