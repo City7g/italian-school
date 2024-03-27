@@ -1,0 +1,6 @@
+- const tags = ['Италия', 'Язык', 'Обучение']
+
+mixin tags
+  .tags&attributes(attributes)
+    each tag in tags
+      .tags__item= tag
