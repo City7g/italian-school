@@ -1,0 +1,10 @@
+section.media-category
+  .container
+    .media-category__header
+      a(href="/media").media-category__back
+        i.icon-ArrowLeft.media-category__back-icon
+      h1.title-h2.media-category__title О Италии
+      p.text-p2.media-category__text Studia.it предлагает новый подход к изучению итальянского языка!
+    .media-category__list
+      each item in [1, 2, 3, 4, 5, 6, 7, 8]
+        +card-video(item)
