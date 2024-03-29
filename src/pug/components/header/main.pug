@@ -11,13 +11,13 @@ header.header
         ul.header__menu-list
           each link in links
             li.header__menu-item
-              a.header__menu-link(href=`${link.path}`)= link.name
+              a.link-primary.header__menu-link(href=`${link.path}`)= link.name
               if (link.name === 'Грамматика')
                 .header__menu-link-bridge
                 include ./rules
           if (mode === 'development')
             li.header__menu-item
-              a.header__menu-link(href='/ui') UI
+              a.link-primary.header__menu-link(href='/ui') UI
         button.btn.btn--transparent.header__btn(data-popup='login') Войти
         button.btn.header__btn(data-popup='register') Регистрация
 

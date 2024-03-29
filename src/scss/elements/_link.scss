@@ -1,0 +1,16 @@
+.link-primary {
+  transition: 0.3s color ease;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.link-secondary {
+  color: $secondary;
+  transition: 0.3s color ease;
+
+  &:hover {
+    color: darken($secondary, 10);
+  }
+}

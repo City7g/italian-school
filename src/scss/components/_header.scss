@@ -96,15 +96,8 @@
 .header__menu-link {
   display: inline-block;
   padding: 10px;
-  color: $black;
   font-size: 14px;
   line-height: 1.5;
-  transition: 0.3s color ease;
-
-  &:hover,
-  &:focus-visible {
-    color: $primary;
-  }
 
   &:focus-visible {
     border-radius: 3px;
@@ -210,8 +203,8 @@
 }
 
 .rules__item {
-  column-count: 2;
   display: none;
+  column-count: 2;
   column-gap: 60px;
 }
 

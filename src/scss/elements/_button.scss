@@ -61,6 +61,12 @@
     border-color: transparent;
     background-color: rgba($secondary, 0.3);
   }
+
+  &:focus-visible {
+    border-color: darken($secondary, 5);
+    background-color: darken($secondary, 5);
+    box-shadow: 0 0 0 6px rgba($secondary, 0.25);
+  }
 }
 
 .btn__icon {
@@ -80,6 +86,13 @@
     color: rgba($primary, 0.3);
     border-color: rgba($primary, 0.3);
     background-color: transparent;
+  }
+
+  &:focus-visible {
+    color: $white;
+    border-color: darken($primary, 5);
+    background-color: darken($primary, 5);
+    box-shadow: 0 0 0 6px rgba($primary, 0.25);
   }
 }
 
@@ -103,6 +116,13 @@
     color: rgba($secondary, 0.3);
     border-color: rgba($secondary, 0.3);
     background-color: transparent;
+  }
+
+  &:focus-visible {
+    color: $white;
+    border-color: darken($secondary, 5);
+    background-color: darken($secondary, 5);
+    box-shadow: 0 0 0 6px rgba($secondary, 0.25);
   }
 }
 

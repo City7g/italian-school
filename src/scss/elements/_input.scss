@@ -15,13 +15,13 @@ input[type='tel'] {
   transition: outline-color 0.4s ease-in-out, outline-offset 0.4s ease-in-out;
 
   &:focus {
-    outline: none;
     border-color: $primary;
+    outline: none;
   }
 
   &::placeholder {
-    opacity: 0.8;
     color: $text;
+    opacity: 0.8;
   }
 
   &:disabled {
@@ -40,8 +40,8 @@ input[type='tel'] {
 
 input[type='text'] {
   background-image: url('/img/icon/user.svg');
-  background-position: 12px center;
   background-repeat: no-repeat;
+  background-position: 12px center;
   background-size: 13px 14px;
 
   @media (min-width: 1200px) {
@@ -52,8 +52,8 @@ input[type='text'] {
 
 input[type='email'] {
   background-image: url('/img/icon/mail.svg');
-  background-position: 12px center;
   background-repeat: no-repeat;
+  background-position: 12px center;
   background-size: 13px 11px;
 
   @media (min-width: 1200px) {
@@ -64,13 +64,13 @@ input[type='email'] {
 
 input[type='password'] {
   background-image: url('/img/icon/lock.svg');
-  background-position: 13px center;
   background-repeat: no-repeat;
+  background-position: 13px center;
   background-size: 12px 15px;
 
   @media (min-width: 1200px) {
-    background-position: 25px center;
     background-repeat: no-repeat;
+    background-position: 25px center;
     background-size: 13px 17px;
   }
 }
