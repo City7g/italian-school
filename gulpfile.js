@@ -55,13 +55,15 @@ const html = () => {
 }
 
 const style = () => {
-  return gulp
-    .src('./src/scss/main.scss')
-    .pipe(sass())
-    .pipe(gcmq())
-    .pipe(cleanCSS())
-    .pipe(gulp.dest('./dist'))
-    .pipe(browsersync.stream())
+  return (
+    gulp
+      .src('./src/scss/main.scss')
+      .pipe(sass())
+      // .pipe(gcmq())
+      // .pipe(cleanCSS())
+      .pipe(gulp.dest('./dist'))
+      .pipe(browsersync.stream())
+  )
 }
 
 const script = () => {

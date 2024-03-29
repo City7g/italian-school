@@ -1,0 +1,28 @@
+- const links = [{ name: 'Обучение', path: '/training' }, { name: 'Материалы', path: '/material' }, { name: 'Грамматика', path: '/grammar' }, { name: 'Медиатека', path: '/media' }, { name: 'Презентации', path: '/presentation' }, { name: 'Блог', path: '/blog' }, { name: 'О нас', path: '/about' }]
+- const rules = [{ title: 'Правила чтения' }, { title: 'Глагол', links: ['Глаголы essere и avere', 'Presente - настоящее время', 'Глаголы третьей группы, спрягающиеся с суффиксом -isc', 'Глаголы essere и esserci', 'Особенности спряжения неправильных глаголов в Presente', 'Verbi riflessivi - возвратные глаголы', 'Passato prossimo - прошедшее законченное время', 'Неправильные причастия прошедшего времени - Participi passati irregolari', 'Модальные глаголы', 'Модальные глаголы в Passato Prossimo', 'Imperfetto - Незаконченное прошедшее время', 'Употребление Imperfetto и Passato Prossimo', 'Модальные глаголы и выбор прошедшего времени', 'Trapassato prossimo - Предпрошедшее время', 'Futuro Semplice - Будущее простое время', 'Futuro Anteriore - Будущее сложное время', 'Согласование времен в изъявительном наклонении - Concordanza dei tempi verbi nell’Indicativo', 'Condizionale Presente - Условное наклонение', 'Condizionale Passato - Условное наклонение в прошедшем времени', 'Конструкция stare + gerundio (настоящее продолжительное время)', 'Конструкция stare per', 'Imperativo - Повелительное наклонение', 'Periodo ipotetico - Условное предложение', 'Passato Remoto - Прошедшее историческое время', 'L’accusativo con l’infinito - Конструкция инфинитив + винительный падеж', 'Congiuntivo - Сослагательное наклонение', 'Употребление Congiuntivo', 'Congiuntivo Presente - Сослагательное наклонение в настоящем времени', 'Congiuntivo Passato - Сослагательное наклонение в прошедшем законченном времени', 'Congiuntivo Imperfetto - Сослагательное наклонение в прошедшем незаконченном времени', 'Congiuntivo Trapassato - Сослагательное наклонение в предпрошедшем времени', 'Periodo Ipotetico - Условное предложение', 'Gerundio - Деепричастие', 'Infinito - Инфинитив', 'Participio presente - Причастие настоящего времени', 'Participio passato - Причастие прошедшего времени', 'Forma passiva - Страдательный залог'] }, { title: 'Существительное', link: ['Род и число', 'Исключения'] }, { title: 'Артикль', links: ['Что такое артикль и зачем он нужен?', 'Определенный артикль', 'Неопределенный артикль единственного числа', 'Выбор артикля', 'Частичный артикль', 'Неопределенный артикль множественного числа', 'Как правильно выбрать артикль?']}, { title: 'Местоимение', links: ['Род и число', 'Притяжательные прилагательные', 'Указательные прилагательные questo и quello (а также bello)', 'Сравнительные степени прилагательных', 'Сравнение'] }, { title: 'Прилагательное', links: ['Личные местоимения именительного падежа (подлежащее)', 'Личные местоимения прямого дополнения', 'Указательные местоимения', 'Вопросительные и относительные местоимения', 'Возвратные местоимения', 'Двойные местоимения (прямого и косвенного дополнения)', 'Относительные местоимения', 'Ci', 'Неопределенно-личное si', 'Ne'] }, { title: 'Предлог', categories: [{ title: 'Положение в пространстве, движение, места', links: ['Когда употреблять IN, а когда А', 'Предлоги положения в пространстве', 'Служебные предлоги'] }, { title: 'Время и дата', links: ['IN и А', 'Для обозначения промежутков времени', 'Для указания на временное отношение между двумя событиями'] }, { title: 'Остальные значения', links: ['Свойства и качества', 'Цена', 'Причина и цель', 'Образ, описание действия', 'Еда', 'Сравнение', 'Возраст', 'Тема', 'Остальные значения'] }] }, { title: 'Слияние предлога и артикля' }, { title: 'Числительные' }, { title: 'Порядок слов в предложении' }, { title: 'Употребление глагольных форм' }, { title: 'Discorso indiretto' }]
+
+header.header
+  include ../../components/logo
+  .container
+    .header__wrap
+      +logo.header__logo
+
+      nav.header__menu
+        ul.header__menu-list
+          each link in links
+            li.header__menu-item
+              a.header__menu-link(href=`${link.path}`)= link.name
+              if (link.name === 'Грамматика')
+                .header__menu-link-bridge
+                include ./rules
+          if (mode === 'development')
+            li.header__menu-item
+              a.header__menu-link(href='/ui') UI
+        button.btn.btn--transparent.header__btn Войти
+        button.btn.header__btn Регистрация
+
+      button.burger.header__burger(aria-label='Menu')
+        span
+        span
+        span
+

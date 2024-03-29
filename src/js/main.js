@@ -1,6 +1,25 @@
 import Swiper from 'swiper'
 import { Navigation } from 'swiper/modules'
 
+// const rules = document.querySelector('.rules')
+// const links = document.querySelectorAll('.header__menu-link')
+
+// let some = false
+
+// if (rules && links.length) {
+//   links.forEach(link => {
+//     link.addEventListener('click', e => {
+//       e.preventDefault()
+//       if (some) {
+//         rules.classList.remove('active')
+//       } else {
+//         rules.classList.add('active')
+//       }
+//       some = !some
+//     })
+//   })
+// }
+
 const slider = document.querySelector('.slider__main')
 
 if (slider) {
@@ -91,3 +110,20 @@ if (timer) {
 
   updateTimer()
 }
+
+const rulesAsideLinks = document.querySelectorAll('.rules__aside .rules__link')
+const ruleItems = document.querySelectorAll('.rules__content .rules__item')
+
+rulesAsideLinks.forEach((link, index) => {
+  link.addEventListener('mouseenter', e => {
+    e.preventDefault()
+
+    ruleItems.forEach((item, idx) => {
+      if (index === idx) {
+        item.classList.add('active')
+      } else {
+        item.classList.remove('active')
+      }
+    })
+  })
+})

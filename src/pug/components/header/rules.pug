@@ -1,0 +1,13 @@
+.rules
+  .rules__wrap
+    .rules__aside
+      each rule in rules
+        a(href="#").rules__link= rule.title
+    .rules__content
+      each rule, index in rules
+        .rules__item(class=`${!index ? 'active' : ''}`)
+          if (rule.links)
+            each ruleLink, index in rule.links
+              a.rules__link(href="#")= ruleLink
+          else
+            p Пока тут ничего нет
