@@ -1,0 +1,23 @@
+#login.popup
+  .popup__bg
+  .popup__wrap
+    .popup__close
+    .popup__content
+      h3.title-h2.popup__title Быстрая регистрация
+      p.text-p2.popup__text Для доступа к функциям личного кабинета необходимо зарегистрироваться.
+
+      form.form.popup__form
+        input(type='text' placeholder='Вашe имя')
+        input(type='email' placeholder='Ваша почта')
+        input(type='password' placeholder='Придумайте пароль')
+        button(type="submit").btn Зарегистрироваться
+
+      .popup__social
+        p.text-p2.popup__social-text Регистрация с помощью:
+        ul.popup__social-list
+          li.popup__social-item
+            img.popup__social-link(src="/img/icon/google.svg" alt="")
+          li.popup__social-item
+            img.popup__social-link(src="/img/icon/facebook.svg" alt="")
+          li.popup__social-item
+            img.popup__social-link(src="/img/icon/vk.svg" alt="")

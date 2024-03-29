@@ -1,0 +1,23 @@
+#register.popup
+  .popup__bg
+  .popup__wrap
+    .popup__close
+    .popup__content
+      h3.title-h2.popup__title Вход
+
+      form.form.popup__form
+        input(type='email' placeholder='Ваша почта')
+        input(type='password' placeholder='Ваш пароль')
+        button(type="submit").btn Войти
+
+      .popup__social
+        p.text-p2.popup__social-text Регистрация с помощью:
+        ul.popup__social-list
+          li.popup__social-item
+            img.popup__social-link(src="/img/icon/google.svg" alt="")
+          li.popup__social-item
+            img.popup__social-link(src="/img/icon/facebook.svg" alt="")
+          li.popup__social-item
+            img.popup__social-link(src="/img/icon/vk.svg" alt="")
+
+      a(href="#").link-error.popup__forgot Забыли пароль? 

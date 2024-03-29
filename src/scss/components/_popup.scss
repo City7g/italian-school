@@ -1,0 +1,177 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000;
+  display: none;
+  transition-duration: 0.3s;
+  transition-behavior: allow-discrete;
+}
+
+.popup.active {
+  padding: 20px;
+  display: flex;
+}
+
+.popup__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(black, 0);
+  transition: 0.3s;
+  transition-behavior: allow-discrete;
+}
+
+.popup.active .popup__bg {
+  background-color: rgba(black, 0.2);
+
+  @starting-style {
+    background-color: rgba(black, 0);
+  }
+}
+
+.popup__wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 110px 65px;
+  background-color: $white;
+  transition: 0.3s;
+  transform: translateX(100%);
+  transition-behavior: allow-discrete;
+
+  @media (min-width: 768px) {
+    padding: 120px 95px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 50%;
+  }
+
+  @media (max-width: 360px) {
+    padding: 80px 45px;
+  }
+}
+
+.popup.active .popup__wrap {
+  transform: translateX(0);
+
+  @starting-style {
+    transform: translateX(100%);
+  }
+}
+
+.popup__close {
+  position: absolute;
+  top: 23px;
+  left: 21px;
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    top: 33px;
+    left: 25px;
+    width: 19px;
+    height: 19px;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 1px;
+    transform: translate(-50%, -50%) rotate(45deg);
+    content: '';
+    background-color: $black;
+
+    @media (min-width: 768px) {
+      width: 26px;
+    }
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+.popup__content {
+  max-width: 310px;
+  margin: 0 auto;
+}
+
+.popup__title {
+  margin-bottom: 10px;
+}
+
+.popup__form {
+  margin-top: 30px;
+}
+
+.popup__social {
+  margin-top: 35px;
+  text-align: center;
+
+  @media (min-width: 786px) {
+    margin-top: 40px;
+  }
+}
+
+.popup__social-text {
+  margin-bottom: 10px;
+}
+
+.popup__social-list {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.popup__forgot {
+  display: block;
+  margin: 40px auto 0;
+  width: max-content;
+
+  @media (min-width: 768px) {
+    margin-top: 55px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @media (min-width: 1200px) {
+    gap: 15px;
+  }
+}
+
+.form button {
+  margin-top: 10px;
+
+  @media (min-width: 1200px) {
+    margin-top: 20px;
+  }
+}
+
+.link-error {
+  color: $secondary;
+  transition: 0.3s color ease;
+
+  &:hover {
+    color: darken($secondary, 10);
+  }
+}

@@ -5,8 +5,10 @@
   border-radius: $radius;
   transition: 0.3s background-color ease;
 
-  &:hover {
-    background-color: #f1f1f1;
+  @media (pointer: fine) {
+    &:hover {
+      background-color: #f1f1f1;
+    }
   }
 
   &:focus-visible {

@@ -127,3 +127,53 @@ rulesAsideLinks.forEach((link, index) => {
     })
   })
 })
+
+const closeAllPopups = () => {
+  document.querySelectorAll('.popup').forEach(p => {
+    p.classList.remove('active')
+  })
+  document.querySelector('.header__menu').classList.remove('active')
+}
+
+const openPopup = id => {
+  const popup = document.querySelector(`#${id}`)
+
+  if (popup) {
+    popup.classList.add('active')
+  }
+}
+
+const hideBodyScroll = () => {
+  document.body.style.overflow = 'hidden'
+}
+
+const showBodyScroll = () => {
+  document.body.style.overflow = ''
+}
+
+const popups = document.querySelectorAll('[data-popup]')
+
+popups.forEach(popup => {
+  popup.addEventListener('click', e => {
+    e.preventDefault()
+
+    const needPopup = document.querySelector(
+      `#${popup.getAttribute('data-popup')}`
+    )
+
+    if (needPopup) {
+      hideBodyScroll()
+      closeAllPopups()
+      openPopup(popup.getAttribute('data-popup'))
+    }
+  })
+})
+
+document
+  .querySelectorAll('.popup .popup__bg, .popup .popup__close')
+  .forEach(popup => {
+    popup.addEventListener('click', () => {
+      showBodyScroll()
+      closeAllPopups()
+    })
+  })
