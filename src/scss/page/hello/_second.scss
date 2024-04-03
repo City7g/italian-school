@@ -1,0 +1,85 @@
+.hello-second {
+  padding: 20px 0 40px;
+
+  @media (min-width: 768px) {
+    padding: 100px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 60px 0;
+  }
+}
+
+.hello-second__wrap {
+  display: grid;
+  gap: 50px;
+  max-width: 850px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    gap: 120px 100px;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hello-second__content {
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.hello-second__title {
+  margin-bottom: 20px;
+}
+
+.hello-second__list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    justify-content: flex-start;
+    gap: 75px;
+  }
+}
+
+.hello-second__list-item {
+  display: grid;
+}
+
+.hello-second__list-item input {
+  display: none;
+}
+
+.hello-second__list-item img {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  width: 120px;
+  height: 160px;
+}
+
+.hello-second__list-item input:checked ~ img:nth-child(2),
+.hello-second__list-item input:not(:checked) ~ img:nth-child(3) {
+  opacity: 0;
+}
+
+.hello-second__list-text {
+  transition: 0.3s all ease;
+}
+
+.hello-second__list-item:hover .hello-second__list-text,
+.hello-second__list-item input:checked ~ .hello-second__list-text {
+  color: $primary;
+}
+
+.hello-second__btn {
+  margin-top: 70px;
+
+  @media (min-width: 768px) {
+    margin-top: 50px;
+  }
+}

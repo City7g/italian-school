@@ -1,0 +1,24 @@
+extends ../../layouts/main
+
+block content
+  section.hello-second
+    .container
+      .hello-second__content
+        h1.title-h2.hello-second__title Кто ты?
+        .hello-second__list
+          label.hello-second__list-item
+            input(type="radio" name="asd")
+            img(src="/img/hello/man.svg" alt="")
+            img(src="/img/hello/man-active.svg" alt="")
+            p.hello-second__list-text Мужчина
+          label.hello-second__list-item
+            input(type="radio" name="asd")
+            img(src="/img/hello/woman.svg" alt="")
+            img(src="/img/hello/woman-active.svg" alt="")
+            p.hello-second__list-text Женщина
+          label.hello-second__list-item
+            input(type="radio" name="asd")
+            img(src="/img/hello/cat.svg" alt="")
+            img(src="/img/hello/cat-active.svg" alt="")
+            p.hello-second__list-text Кот
+        a(href="/hello/third").btn.hello-second__btn Продолжить

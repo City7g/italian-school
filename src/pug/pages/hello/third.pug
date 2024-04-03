@@ -1,0 +1,25 @@
+extends ../../layouts/main
+
+block content
+  section.hello-third
+    .container
+      .hello-third__wrap
+        .hello-third__content
+          h1.title-h2.hello-third__title Для чего ты хочешь знать итальянский?
+          .hello-third__list
+            label.hello-second__list-item
+              input(type="radio" name="asd")
+              p.hello-second__list-text Для кота
+            label.hello-second__list-item
+              input(type="radio" name="asd")
+              p.hello-second__list-text Хочу найти себе итальянку / итальянца
+            label.hello-second__list-item
+              input(type="radio" name="asd")
+              p.hello-second__list-text По работе нужно искать итальянцев и разговаривать с ними а потом еще что то 
+            label.hello-second__list-item
+              input(type="radio" name="asd")
+              p.hello-second__list-text Мне просто нравиться!
+          a(href="/hello/first").btn.hello-third__btn Вперед! 
+
+        .hello-third__image
+          img.hello-third__img(src="/img/illustration/hello-third.svg" alt="")
