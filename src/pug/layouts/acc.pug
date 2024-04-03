@@ -1,0 +1,32 @@
+include ../components/card/article
+include ../components/card/offer
+include ../components/card/video
+include ../components/card/notification
+
+block variables
+  - const offers = [{ title: 'Классические занятия', text: '5 - 10 занятий', img: 'item-1' }, { title: 'Разговорные занятия', text: '5 - 30 занятий', img: 'item-2' }, { title: 'Отработка произношения', text: '3 занятия', img: 'item-3' }]
+
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= title ? `${title} | Account` : 'Account'
+    link(rel="stylesheet" href="/main.css")
+    include ../utils/preload
+    meta(name="description" content="Account page")
+    include ../utils/og
+    meta(name="theme-color" content="#000000")
+  body
+    //- include ../components/header/main
+
+    main
+      block content
+
+    //- include ../components/footer
+
+    //- include ../components/popup/login
+    //- include ../components/popup/register
+
+    script(src="/main.js") 

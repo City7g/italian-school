@@ -1,25 +1,25 @@
 .title-link {
   display: block;
   max-width: max-content;
-}
-
-.title-link__title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   transition: 0.3s color ease;
-
-  @media (min-width: 1200px) {
-    gap: 24px;
-  }
 
   &:hover {
     color: $secondary;
   }
 }
 
+.title-link__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  @media (min-width: 1200px) {
+    gap: 24px;
+  }
+}
+
 .title-link__icon {
-  transition: 0.3s all ease;
+  // transition: 0.3s transform ease;transitiontransition
 }
 
 .title-link:hover .title-link__icon {

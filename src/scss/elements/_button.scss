@@ -13,6 +13,7 @@
   border-radius: $radius;
   background-color: $primary;
   transition: 0.3s all ease;
+  white-space: nowrap;
 
   &:hover {
     border-color: darken($primary, 5);
