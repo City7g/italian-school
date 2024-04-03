@@ -8,12 +8,12 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 1.3;
+  white-space: nowrap;
   text-align: center;
   border: 1px solid $primary;
   border-radius: $radius;
   background-color: $primary;
   transition: 0.3s all ease;
-  white-space: nowrap;
 
   &:hover {
     border-color: darken($primary, 5);

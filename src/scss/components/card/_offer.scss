@@ -1,7 +1,7 @@
 .card-offer {
   padding: 40px 20px;
-  background-color: $bg;
   border-radius: $radius;
+  background-color: $bg;
 
   @media (min-width: 1200px) {
     padding: 40px 30px;
@@ -21,8 +21,8 @@
 }
 
 .card-offer__title {
-  margin-top: 10px;
   max-width: 150px;
+  margin-top: 10px;
 
   @media (min-width: 768px) {
     margin-top: 15px;

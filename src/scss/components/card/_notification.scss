@@ -26,10 +26,10 @@
   line-height: 20px;
 
   & span {
+    color: $secondary;
     font-size: 14px;
     line-height: 20px;
     text-decoration: underline;
     text-underline-offset: 2px;
-    color: $secondary;
   }
 }
