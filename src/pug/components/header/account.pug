@@ -5,26 +5,6 @@ header.header
   include ../../components/logo
   .container
     .header__wrap
+      +burger.header__burger
       +logo.header__logo
-
-      nav.header__menu
-        ul.header__menu-list
-          each link in links
-            li.header__menu-item
-              a.link-primary.header__menu-link(href=`${link.path}`)= link.name
-              if (link.name === 'Грамматика')
-                .header__menu-link-bridge
-                include ./rules
-          if (mode === 'development')
-            li.header__menu-item
-              a.link-primary.header__menu-link(href='/ui') UI
-        button.btn.btn--transparent.header__btn(data-popup='login') Войти
-        button.btn.header__btn(data-popup='register') Регистрация
-
-      +socials
-
-      button.burger.header__burger(aria-label='Menu')
-        span
-        span
-        span
 
