@@ -1,42 +1,8 @@
 extends ../../layouts/acc
 
-
 block content
   .acc
     aside
     .acc__wrap
       section.acc
         .acc-container
-          .acc__header
-            h1.title-h3.acc__title Специальные предложения
-            button.btn.btn--secondary.btn--outline.acc__btn Экзамен на сертификат
-
-          .acc__offers-list
-            +card-offer(offers[0].title, offers[0].text, '1')
-            +card-offer(offers[1].title, offers[1].text, '2')
-            +card-offer(offers[2].title, offers[2].text, '3')
-
-      section.acc-notifications
-        .acc-container
-          h1.title-h3.acc-notifications__title Специальные предложения
-
-          .acc-notifications__offers-list
-            +card-notification('Анна Батьковна', '30')
-            +card-notification('Анна Батьковна', '60')
-            +card-notification('Анна Батьковна', '90')
-
-      section.acc-article
-        .acc-container
-          h1.title-h3.acc-article__title Последние статьи
-
-          .acc-article__offers-list
-            - for (var x = 1; x < 3; x++)
-              +card-article(x)
-
-      section.acc-video
-        .acc-container
-          h1.title-h3.acc-video__title Последние видео
-
-          .acc-video__offers-list
-            - for (var x = 1; x < 3; x++)
-              +card-video(x)

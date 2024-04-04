@@ -1,0 +1,35 @@
+.card-curator {
+  padding: 15px 22px 15px 18px;
+  background-color: $bg;
+
+  @media (min-width: 768px) {
+    padding: 30px 24px 30px 30px;
+  }
+}
+
+.card-curator + .card-curator {
+  margin-top: 13px;
+}
+
+.card-curator__img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  @media (min-width: 768px) {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+.card-curator__description {
+  @include line-clamp(3);
+}
+
+.card-curator__video {
+  margin-top: 20px;
+}
+
+.card-curator__start {
+  margin-top: 10px;
+}
