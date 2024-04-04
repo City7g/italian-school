@@ -31,13 +31,8 @@
 
 .footer__logo {
   justify-self: flex-start;
-  margin: -5px -5px 0;
-  padding: 5px;
-
-  @media (min-width: 1200px) {
-    margin: -10px -10px 0;
-    padding: 10px;
-  }
+  margin: -10px -10px 0;
+  padding: 10px;
 }
 
 .footer__menu {
@@ -51,7 +46,9 @@
 }
 
 .footer__menu-list {
-  column-count: 2;
+  @media (min-width: 360px) {
+    column-count: 2;
+  }
 
   @media (min-width: 1200px) {
     column-count: 3;
