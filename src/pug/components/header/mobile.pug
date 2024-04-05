@@ -1,0 +1,10 @@
+.header-mobile
+  ul.header-mobile__menu-list
+    each link in links
+      li.header-mobile__menu-item
+        a.link-primary.header-mobile__menu-link(href=`${link.path}`)= link.name
+    if (mode === 'development')
+      li.header-mobile__menu-item
+        a.link-primary.header-mobile__menu-link(href='/ui') UI
+
+  +socials.header-mobile__socials

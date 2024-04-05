@@ -21,10 +21,13 @@ html(lang="en")
     include ../utils/og
     meta(name="theme-color" content="#000000")
   body
-    include ../components/header/account
+    .acc__header-wrap
+      include ../components/header/account
 
-    main
-      block content
+    .acc
+      include ../components/account/aside
+      .acc-content__wrap
+        block content
 
     //- include ../components/footer
 

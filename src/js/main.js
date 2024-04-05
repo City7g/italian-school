@@ -42,7 +42,7 @@ if (burger) {
 }
 
 const headerBurger = document.querySelector('.header__burger')
-const headerMenu = document.querySelector('.header__menu')
+const headerMenu = document.querySelector('.header-mobile')
 
 if (headerBurger && headerMenu) {
   headerBurger.addEventListener('click', e => {

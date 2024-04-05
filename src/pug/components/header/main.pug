@@ -18,13 +18,15 @@ header.header
           if (mode === 'development')
             li.header__menu-item
               a.link-primary.header__menu-link(href='/ui') UI
-        button.btn.btn--transparent.header__btn(data-popup='login') Войти
-        button.btn.header__btn(data-popup='register') Регистрация
 
-      +socials
+      +socials.header__socials
+        p asd
 
-      button.burger.header__burger(aria-label='Menu')
-        span
-        span
-        span
+      .header__btns
+        button.btn.btn--transparent.header__btns-login(data-popup='login') Войти
+        button.btn.header__btns-register(data-popup='register') Регистрация
+
+      +burger.header__burger
+
+include ./mobile
 
