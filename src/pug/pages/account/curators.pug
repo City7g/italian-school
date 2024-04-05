@@ -2,6 +2,5 @@ extends ../../layouts/acc
 
 block content
   section.acc-curator
-    .acc-container
-      - for (var x = 1; x < 7; x++)
-        +card-curator(x)
+    - for (var x = 1; x < 7; x++)
+      +card-curator(x)

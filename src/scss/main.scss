@@ -40,7 +40,10 @@
   }
 }
 
-.acc-aside__logo {
+.acc-aside__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 80px;
 }
 
@@ -79,21 +82,21 @@
     gap: 30px;
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 359px) {
     grid-template-columns: 1fr;
   }
 }
 
 .acc-content__wrap {
   max-width: 850px;
-  padding: 20px 20px 90px;
+  padding: 70px 20px 40px;
 
   @media (min-width: 768px) {
-    padding: 25px 25px 120px;
+    padding: 25px 25px 60px;
   }
 
   @media (min-width: 1200px) {
-    padding: 20px 30px 240px;
+    padding: 20px 30px 80px;
   }
 }
 
