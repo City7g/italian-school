@@ -1,17 +1,17 @@
 .header-mobile {
-  display: none;
   position: fixed;
   top: 0;
-  right: 0;
   bottom: 0;
+  right: 0;
   z-index: 999;
-  background-color: $white;
+  display: none;
   width: 300px;
   max-width: 100%;
   padding: 70px 40px 40px;
+  background-color: $white;
+  transform: translateX(100%);
   transition: 0.3s;
   transition-behavior: allow-discrete;
-  transform: translateX(100%);
 
   @media (min-width: 768px) {
     padding: 70px 60px 40px;

@@ -15,8 +15,8 @@
 .acc {
   @media (min-width: 1200px) {
     display: grid;
-    align-items: flex-start;
     grid-template-columns: 400px 1fr;
+    align-items: flex-start;
   }
 }
 
@@ -48,7 +48,27 @@
 }
 
 .acc-aside__link {
+  position: relative;
   display: block;
+  padding: 5px 0 10px 40px;
+  padding-left: 40px;
+}
+
+.acc-aside__link img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  transform: translateY(calc(-50% - 5px));
+  transition: 0.3s all ease;
+}
+
+.acc-aside__link:last-child img {
+  left: 8px;
+}
+
+.acc-aside__link:hover img {
+  transform: translateY(calc(-50% - 7px));
 }
 
 .acc-aside__link + .acc-aside__link {
@@ -57,9 +77,9 @@
 
 .acc-offers__header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  flex-wrap: wrap;
   gap: 5px 15px;
   margin-bottom: 15px;
 
