@@ -1,6 +1,28 @@
 extends ../../layouts/acc
 
 block content
+  .acc-info
+    .acc-info__wrap
+      .info-level
+        .info-level__level
+          h3.title-h4.info-level__level-head Ваш уровень
+          img(src="/img/grammar/a1-g.svg" alt="")
+        .info-level__item
+          p.text-p4.info-level__item-head Грамматика
+          .info-level__progress
+            img(src="/img/account/progress.svg" alt="")
+            p.text-p4 68%
+        .info-level__item
+          p.text-p4.info-level__item-head Лексика
+          .info-level__progress
+            img(src="/img/account/progress.svg" alt="")
+            p.text-p4 35%
+      .info-test
+        h3.title-h4 Хочешь узнать, как у нас классно? Пройди пробное занятие
+        button.btn.btn--secondary Вперед!
+        img(src="/img/account/test-class.svg" alt="")
+
+
   section.acc-offers
     .acc-offers__header
       h1.title-h3.acc-offers__title Специальные предложения
