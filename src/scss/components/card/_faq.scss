@@ -1,0 +1,25 @@
+.card-faq {
+  padding: 18px 12px;
+  border-radius: $radius;
+  background-color: $bg;
+
+  @media (min-width: 1200px) {
+    padding: 24px 32px;
+  }
+}
+
+.card-faq + .card-faq {
+  margin-top: 13px;
+}
+
+.card-faq__title {
+  margin-bottom: 6px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 15px;
+  }
+}
+
+.card-faq__text {
+  @include line-clamp(2);
+}
