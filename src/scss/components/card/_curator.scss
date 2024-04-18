@@ -1,13 +1,13 @@
 .card-curator {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 220px 1fr auto auto;
   gap: 20px;
   padding: 15px 22px 15px 18px;
   background-color: $bg;
 
   @media (min-width: 768px) {
-    grid-template-columns: 260px 1fr;
-    gap: 50px 60px;
+    grid-template-columns: 260px 1fr auto auto;
+    gap: 0 60px;
     padding: 30px 24px 30px 30px;
   }
 
@@ -52,8 +52,6 @@
 }
 
 .card-curator__description {
-  // @include line-clamp(3);
-
   @media (max-width: 767px) {
     grid-column: 1 / -1;
   }
@@ -63,7 +61,16 @@
   }
 }
 
+.card-curator:not(.active) .card-curator__description {
+  @include line-clamp(3);
+  height: 58.8px;
+}
+
 .card-curator__btns {
+  display: none;
+}
+
+.card-curator.active .card-curator__btns {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -75,4 +82,44 @@
   @media (min-width: 576px) {
     gap: 15px;
   }
+
+  @media (min-width: 768px) {
+    margin-top: 50px;
+  }
+}
+
+.card-curator__arrow {
+  rotate: 90deg;
+  transition: 0.3s all ease;
+  justify-self: flex-start;
+  align-self: flex-start;
+
+  &:hover {
+    rotate: -90deg;
+  }
+
+  @media (max-width: 767px) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+}
+
+.card-curator__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 3px;
+
+  @media (max-width: 767px) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+}
+
+.card-curator__info span {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #c4c4c4;
+  border-radius: 50%;
 }

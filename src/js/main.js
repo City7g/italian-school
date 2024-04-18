@@ -177,3 +177,11 @@ document
       closeAllPopups()
     })
   })
+
+const cardCurator = document.querySelectorAll('.card-curator')
+
+cardCurator.forEach(card => {
+  card.querySelector('.card-curator__arrow').addEventListener('click', () => {
+    card.classList.toggle('active')
+  })
+})
