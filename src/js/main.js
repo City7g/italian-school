@@ -43,8 +43,9 @@ if (burger) {
 
 const headerBurger = document.querySelector('.header__burger')
 const headerMenu = document.querySelector('.header-mobile')
+const accountAside = document.querySelector('.acc-aside')
 
-if (headerBurger && headerMenu) {
+if (headerBurger && (headerMenu || accountAside)) {
   headerBurger.addEventListener('click', e => {
     e.preventDefault()
 
@@ -53,7 +54,12 @@ if (headerBurger && headerMenu) {
       : 'hidden'
 
     headerBurger.classList.toggle('active')
-    headerMenu.classList.toggle('active')
+    if (headerMenu) {
+      headerMenu.classList.toggle('active')
+    }
+    if (accountAside) {
+      accountAside.classList.toggle('active')
+    }
   })
 }
 
