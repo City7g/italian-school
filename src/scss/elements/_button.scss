@@ -56,20 +56,27 @@
   background-color: $secondary;
 
   &:hover {
+    color: $white;
     border-color: darken($secondary, 5);
     background-color: darken($secondary, 5);
-  }
-
-  &:disabled {
-    color: $white;
-    border-color: transparent;
-    background-color: rgba($secondary, 0.3);
   }
 
   &:focus-visible {
     border-color: darken($secondary, 5);
     background-color: darken($secondary, 5);
     box-shadow: 0 0 0 6px rgba($secondary, 0.25);
+  }
+
+  &:active {
+    color: $white;
+    border-color: darken($secondary, 10);
+    background-color: darken($secondary, 10);
+  }
+
+  &:disabled {
+    color: $white;
+    border-color: transparent;
+    background-color: rgba($secondary, 0.3);
   }
 }
 
@@ -112,7 +119,8 @@
   color: $secondary;
   border-color: $secondary;
 
-  &:hover {
+  &:hover,
+  &:active {
     color: $white;
   }
 
