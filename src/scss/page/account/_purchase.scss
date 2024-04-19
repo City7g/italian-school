@@ -1,0 +1,36 @@
+.purchase {
+}
+
+.purchase__img {
+  margin-bottom: 56px;
+}
+
+.purchase__title {
+  margin-bottom: 16px;
+  max-width: 200px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+    max-width: 500px;
+  }
+}
+
+.purchase__text {
+  max-width: 320px;
+
+  @media (min-width: 400px) {
+    max-width: 350px;
+  }
+}
+
+.purchase__btn {
+  margin-top: 30px;
+
+  @media (min-width: 768px) {
+    margin-top: 40px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-top: 48px;
+  }
+}

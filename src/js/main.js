@@ -192,3 +192,13 @@ cardCurator.forEach(card => {
     card.classList.toggle('active')
   })
 })
+
+const packageForm = document.querySelector('.form-package')
+
+if (packageForm) {
+  packageForm.addEventListener('submit', e => {
+    e.preventDefault()
+
+    window.location.href = '/account/purchase'
+  })
+}
