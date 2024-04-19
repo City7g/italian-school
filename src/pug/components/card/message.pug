@@ -1,0 +1,13 @@
+mixin card-message(open)
+  .card-message(class=`${open ? 'card-message--open' : ''}`)
+    if open
+      img.card-message__img(src='/img/account/message-open.svg' alt='')
+    else
+      img.card-message__img(src='/img/account/message-close.svg' alt='')
+    h2.title-h4.card-message__title Почему выдает ошибку?
+    p.text-p4.card-message__text Exercitation officia ad officia sit amet laboris Lorem Lorem. Veniam tur sint amet in cupidatat ea cillum. Irure fugiat magna deserunt labore veniam cupidatatxercitation officia ad officia sit amet laboris Lorem Lorem. Veniam tur sint amet in cupidatat ea cillum. Irure fugiat magna deserunt labore veniam cupidatatxercitation officia ad officia sit amet laboris Lorem Lorem. Veniam tur sint amet in cupidatat ea cillum. Irure fugiat magna deserunt labore veniam cupidatatxercitation officia ad officia sit amet laboris Lorem Lorem. Veniam tur sint amet in cupidatat ea cillum. Irure fugiat magna deserunt labore veniam cupidatat
+    if open
+      p.title-h5.card-message__status Отвечен
+    else
+      p.title-h5.card-message__status В ожидании
+    p.text-p2.card-message__date 12.02.20

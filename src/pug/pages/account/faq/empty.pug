@@ -1,0 +1,20 @@
+extends ../../../layouts/acc
+
+block content
+  - const faq = ['Как пользоваться Studia.it?', 'Что такое Studia.it?', 'Как повышать уровень?', 'Хочу работать у вас преподователем! Куда мне писать?', 'Забыл пароль, что делать?']
+
+  section.faq
+    .faq__header
+      h1.title-h3.faq__title Поддержка пользователей
+      +form-search.faq__search
+      a(href='/account/faq/message').btn.btn--secondary.btn--outline.faq__btn Мои сообщения
+
+    .faq__empty
+      img.faq__empty-img(src="/img/account/faq.svg" alt="")
+      h1.title-h3.faq__empty-title У вас ещё нет сообщений.
+      p.text-p2.faq__empty-text Если у вас есть вопросы, замечания, пожелания, вы просто хотите поговорить - напишите нам!
+      button.btn.faq__empty-btn Задать вопрос в поддержку
+
+    .faq__list
+      each item, index in faq
+        +card-faq(item, index + 1)

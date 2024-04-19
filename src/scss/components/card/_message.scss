@@ -1,0 +1,71 @@
+.card-message {
+  display: grid;
+  grid-template-columns: 51px 1fr;
+  grid-template-rows: auto 1fr;
+  align-items: center;
+  gap: 4px 15px;
+  position: relative;
+  background-color: $bg;
+  padding: 20px 52px 20px 12px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 87px 1fr;
+    gap: 10px 60px;
+    padding: 32px 170px 32px 32px;
+  }
+}
+
+.card-message--open {
+  background-color: #f1ffea;
+}
+
+.card-message + .card-message {
+  margin-top: 10px;
+
+  @media (min-width: 768px) {
+    margin-top: 13px;
+  }
+}
+
+.card-message__img {
+  grid-row: span 2;
+  width: 51px;
+
+  @media (min-width: 768px) {
+    width: 87px;
+  }
+}
+
+.card-message__text {
+  @include line-clamp(2);
+}
+
+.card-message__status {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+
+  @media (min-width: 768px) {
+    top: 20px;
+    right: 36px;
+    padding: 5px 15px;
+    border-radius: $radius;
+    border: 1px solid $text;
+  }
+}
+
+.card-message--open .card-message__status {
+  border-color: $primary;
+  color: $primary;
+}
+
+.card-message__date {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+
+  @media (min-width: 768px) {
+    right: 36px;
+    bottom: 20px;
+  }
+}

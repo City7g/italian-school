@@ -1,4 +1,4 @@
-extends ../../layouts/acc
+extends ../../../layouts/acc
 
 block content
   - const faq = ['Как пользоваться Studia.it?', 'Что такое Studia.it?', 'Как повышать уровень?', 'Хочу работать у вас преподователем! Куда мне писать?', 'Забыл пароль, что делать?']
@@ -7,6 +7,8 @@ block content
     .faq__header
       h1.title-h3.faq__title Поддержка пользователей
       +form-search.faq__search
-      button.btn.btn--secondary.btn--outline.faq__btn Мои сообщения
-    each item, index in faq
-      +card-faq(item, index + 1)
+      a(href='/account/faq/message').btn.btn--secondary.btn--outline.faq__btn Мои сообщения
+
+    .faq__list
+      each item, index in faq
+        +card-faq(item, index + 1)

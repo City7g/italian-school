@@ -1,0 +1,18 @@
+extends ../../../layouts/acc
+
+block content
+  section.faq
+    .faq__header
+      h1.title-h3.faq__title Поддержка пользователей
+      +form-search.faq__search
+      a(href='/account/faq').btn.btn--secondary.btn--outline.faq__btn FAQ
+
+    .faq__header
+      h1.title-h3.faq__title Мои сообщения
+      a(href='/account/faq').btn.faq__btn Новый вопрос
+
+    .faq__list
+      +card-message(false)
+      +card-message(false)
+      +card-message(true)
+      +card-message(true)
