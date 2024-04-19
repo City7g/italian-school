@@ -14,10 +14,10 @@
   top: 0;
   right: 0;
   padding: 4px 6px;
-  border-top-right-radius: $radius;
-  border: 1px solid $primary;
-  background-color: $white;
   color: $primary;
+  border: 1px solid $primary;
+  border-top-right-radius: $radius;
+  background-color: $white;
 
   @media (min-width: 768px) {
     padding: 6px 8px;

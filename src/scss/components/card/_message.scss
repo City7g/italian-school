@@ -1,12 +1,12 @@
 .card-message {
+  position: relative;
   display: grid;
-  grid-template-columns: 51px 1fr;
   grid-template-rows: auto 1fr;
+  grid-template-columns: 51px 1fr;
   align-items: center;
   gap: 4px 15px;
-  position: relative;
-  background-color: $bg;
   padding: 20px 52px 20px 12px;
+  background-color: $bg;
 
   @media (min-width: 768px) {
     grid-template-columns: 87px 1fr;
@@ -49,23 +49,23 @@
     top: 20px;
     right: 36px;
     padding: 5px 15px;
-    border-radius: $radius;
     border: 1px solid $text;
+    border-radius: $radius;
   }
 }
 
 .card-message--open .card-message__status {
-  border-color: $primary;
   color: $primary;
+  border-color: $primary;
 }
 
 .card-message__date {
   position: absolute;
-  right: 10px;
   bottom: 8px;
+  right: 10px;
 
   @media (min-width: 768px) {
-    right: 36px;
     bottom: 20px;
+    right: 36px;
   }
 }

@@ -1,9 +1,9 @@
 .card-webinar {
   position: relative;
+  padding: 30px;
   text-align: center;
   border-radius: $radius;
   background-color: $bg;
-  padding: 30px;
 }
 
 .card-webinar__status {
@@ -15,31 +15,31 @@
   gap: 12px;
 
   &::before {
-    display: block;
     content: '';
+    display: block;
     width: 12px;
     height: 12px;
-    box-shadow: 0 0 0 6px rgba($secondary, 0.2);
-    background-color: $secondary;
     border-radius: 50%;
+    background-color: $secondary;
+    box-shadow: 0 0 0 6px rgba($secondary, 0.2);
   }
 }
 
 .card-webinar__status-next::before {
-  box-shadow: 0 0 0 6px rgba($primary, 0.2);
   background-color: $primary;
+  box-shadow: 0 0 0 6px rgba($primary, 0.2);
 }
 
 .card-webinar__status-prev::before {
-  box-shadow: 0 0 0 6px rgba($text, 0.2);
   background-color: $text;
+  box-shadow: 0 0 0 6px rgba($text, 0.2);
 }
 
 .card-webinar__img {
   width: 87px;
   height: 87px;
-  border-radius: 50%;
   margin-bottom: 20px;
+  border-radius: 50%;
 }
 
 .card-webinar__name {
@@ -59,9 +59,9 @@
 }
 
 .card-webinar__separator {
-  margin: 0 auto 20px;
-  height: 1px;
   width: 200px;
+  height: 1px;
+  margin: 0 auto 20px;
   background-color: #d8d8d8;
 }
 

@@ -12,14 +12,14 @@
 }
 
 .list li::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  margin-right: 10px;
-  content: '';
   display: inline-block;
   width: 17px;
   height: 18px;
+  margin-right: 10px;
   background-image: url('/img/account/check.svg');
   background-repeat: no-repeat;
   background-position: center;

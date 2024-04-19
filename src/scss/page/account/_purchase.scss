@@ -6,12 +6,12 @@
 }
 
 .purchase__title {
-  margin-bottom: 16px;
   max-width: 200px;
+  margin-bottom: 16px;
 
   @media (min-width: 768px) {
-    margin-bottom: 24px;
     max-width: 500px;
+    margin-bottom: 24px;
   }
 }
 
