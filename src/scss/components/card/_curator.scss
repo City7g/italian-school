@@ -89,13 +89,12 @@
 }
 
 .card-curator__arrow {
-  rotate: 90deg;
   transition: 0.3s all ease;
   justify-self: flex-start;
   align-self: flex-start;
 
   &:hover {
-    rotate: -90deg;
+    rotate: 180deg;
   }
 
   @media (max-width: 767px) {
