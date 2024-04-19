@@ -1,10 +1,20 @@
 .card-faq {
+  display: grid;
+  grid-template-columns: 54px 1fr 32px;
+  grid-template-rows: auto 1fr;
+  align-items: flex-start;
+  gap: 0 20px;
   padding: 18px 12px;
   border-radius: $radius;
   background-color: $bg;
 
+  @media (min-width: 768px) {
+    grid-template-columns: 102px 1fr 32px;
+  }
+
   @media (min-width: 1200px) {
     padding: 24px 32px;
+    gap: 0 40px;
   }
 }
 
@@ -13,13 +23,44 @@
 }
 
 .card-faq__title {
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+  margin-top: 4px;
 
   @media (min-width: 768px) {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    margin-top: 12px;
+  }
+}
+
+.card-faq__img {
+  grid-row: span 2;
+
+  @media (min-width: 1200px) {
+    margin-right: 40px;
   }
 }
 
 .card-faq__text {
+  max-width: 500px;
+}
+
+.card-faq:not(.active) .card-faq__text {
   @include line-clamp(2);
+}
+
+.card-faq__arrow {
+  grid-column: 3 / -1;
+  grid-row: 1 / 2;
+  cursor: pointer;
+  transition: 0.3s all ease;
+
+  @media (pointer: fine) {
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.card-faq.active .card-faq__arrow {
+  rotate: 180deg;
 }

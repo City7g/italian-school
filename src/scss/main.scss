@@ -293,16 +293,3 @@
     width: 116px;
   }
 }
-
-.acc-faq__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 21px;
-
-  @media (min-width: 768px) {
-    gap: 15px;
-    margin-bottom: 24px;
-  }
-}
