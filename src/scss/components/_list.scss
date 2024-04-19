@@ -1,0 +1,36 @@
+.list {
+  color: $primary;
+}
+
+.list li {
+  position: relative;
+  padding-left: 30px;
+
+  @media (min-width: 768px) {
+    padding-left: 40px;
+  }
+}
+
+.list li::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-right: 10px;
+  content: '';
+  display: inline-block;
+  width: 17px;
+  height: 18px;
+  background-image: url('/img/account/check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: 768px) {
+    width: 23px;
+    height: 24px;
+  }
+}
+
+.list li ~ li {
+  margin-top: 5px;
+}

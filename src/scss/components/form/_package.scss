@@ -1,0 +1,84 @@
+.form-package {
+  position: relative;
+  padding: 32px;
+  border-radius: $radius;
+  background-color: $bg;
+
+  @media (min-width: 768px) {
+    padding: 40px 32px;
+  }
+}
+
+.form-package__sale {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px 6px;
+  border-top-right-radius: $radius;
+  border: 1px solid $primary;
+  background-color: $white;
+  color: $primary;
+
+  @media (min-width: 768px) {
+    padding: 6px 8px;
+  }
+}
+
+.form-package__subtitle {
+  margin-bottom: 4px;
+}
+
+.form-package__title {
+  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.form-package__text {
+  margin-bottom: 16px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+}
+
+.form-package__selects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.form-package__selects select {
+  margin-top: 6px;
+
+  @media (min-width: 768px) {
+    margin-top: 8px;
+  }
+}
+
+.form-package__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+
+  @media (min-width: 1200px) {
+    margin-top: 40px;
+  }
+}
+
+.form-package__price {
+  color: $primary;
+}
+
+.form-package__btn {
+  width: 100%;
+  margin-top: 30px;
+
+  @media (min-width: 1200px) {
+    margin-top: 40px;
+  }
+}

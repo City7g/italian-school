@@ -1,5 +1,5 @@
 mixin card-offer(title, text, img)
-  .card-offer
+  a(href="/account/package").card-offer
     img.card-offer__img(src=`/img/offers/item-${img}.svg` alt="")
     h3.title-h3.card-offer__title= title
     p.text-p2.card-offer__text= text

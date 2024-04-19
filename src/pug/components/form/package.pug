@@ -1,0 +1,23 @@
+mixin form-package()
+  form.form-package
+    p.form-package__sale Скидка - 10%
+    p.text-p4.form-package__subtitle Пакет занятий
+    h2.title-h2.form-package__title Разговорные занятия
+    p.text-p2.form-package__text Выберете удобную конфигурацию
+    .form-package__selects
+      .form-package__select
+        p.text-p4 Длительность
+        select
+          option 20 мин
+          option 30 мин
+          option 40 мин
+      .form-package__select
+        p.text-p4 Кол-во занятий
+        select
+          option 10
+          option 15
+          option 20
+    .form-package__total
+      p.title-h4 К оплате:
+      p.title-h3.form-package__price 25 000 р.
+    button(type="submit").btn.btn--secondary.form-package__btn Выбрать пакет

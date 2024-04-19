@@ -1,0 +1,41 @@
+.package {
+  display: grid;
+  gap: 64px 32px;
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 360px;
+    gap: 64px;
+  }
+}
+
+.package__image {
+  display: block;
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.package__img {
+  display: block;
+  width: 150px;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.package__list {
+  margin-top: 20px;
+
+  @media (min-width: 1200px) {
+    margin-top: 15px;
+  }
+}
+
+.package__btn {
+  margin-top: 32px;
+
+  @media (min-width: 768px) {
+    margin-top: 44px;
+  }
+}
