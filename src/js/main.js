@@ -182,6 +182,13 @@ const cardCurator = document.querySelectorAll('.card-curator')
 
 cardCurator.forEach(card => {
   card.querySelector('.card-curator__arrow').addEventListener('click', () => {
+    // if (!document.startViewTransition) {
+    //   card.classList.toggle('active')
+    // } else {
+    //   document.startViewTransition(() => {
+    //     card.classList.toggle('active')
+    //   })
+    // }
     card.classList.toggle('active')
   })
 })

@@ -16,11 +16,13 @@
   transition: 0.3s all ease;
 
   &:hover {
+    color: $white;
     border-color: darken($primary, 5);
     background-color: darken($primary, 5);
   }
 
   &:focus-visible {
+    color: $white;
     border-color: darken($primary, 5);
     background-color: darken($primary, 5);
     outline: none;
@@ -28,6 +30,7 @@
   }
 
   &:active {
+    color: $white;
     border-color: darken($primary, 10);
     background-color: darken($primary, 10);
   }
