@@ -1,0 +1,15 @@
+extends ../../layouts/acc
+
+block content
+  section.group
+    .group__header
+      a(href="/account/group").btn.btn--outline Курсы
+      .btn Вебинары
+      select
+        option Все курсы
+        option Мои курсы
+    .group__list
+      +card-webinar
+      +card-webinar
+      +card-webinar
+      +card-webinar

@@ -1,0 +1,13 @@
+mixin card-group()
+  .card-group
+    img.card-group__img(src="/img/curator/item-2.jpg" alt="")
+    h3.title-h4.card-group__name Annette Black
+    h2.title-h2.card-group__title Итальянский для чайников.
+    if (Math.random() > .7)
+      button.btn.card-group__btn Перейти к занятию
+    else
+      .card-group__schedule
+        .card-group__separator
+        p.text-p2.card-group__schedule-heading график занятий
+        p.title-h4.card-group__schedule-time Пн. 10:00 - 11:00
+        p.title-h4.card-group__schedule-time Ср. 12:00 - 13:00

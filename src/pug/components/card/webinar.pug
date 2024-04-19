@@ -1,0 +1,17 @@
+mixin card-webinar()
+  .card-webinar
+    if Math.random() < .33
+      .text-p4.card-webinar__status Сейчас в сети
+    else if Math.random() < .33
+      .text-p4.card-webinar__status.card-webinar__status-next Предстоящий
+    else
+      .text-p4.card-webinar__status.card-webinar__status-prev Прошедший
+    img.card-webinar__img(src="/img/curator/item-3.jpg" alt="")
+    h3.title-h4.card-webinar__name Floyd Miles
+    h2.title-h2.card-webinar__title Итальянское произношение
+    if Math.random() > .7
+      button.btn.card-webinar__btn Перейти к вебинару
+    else
+      .card-webinar__schedule
+        .card-webinar__separator
+        p.title-h4.card-webinar__schedule-time 1 декабря - 10:30
