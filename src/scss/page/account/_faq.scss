@@ -1,12 +1,45 @@
 .faq__header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  gap: 10px;
+  gap: 15px 10px;
   margin-bottom: 21px;
 
   @media (min-width: 768px) {
     gap: 15px;
     margin-bottom: 24px;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  @media (max-width: 359px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.faq__title {
+  @media (max-width: 767px) {
+    grid-column: 1 / -1;
+  }
+
+  @media (max-width: 359px) {
+    margin-bottom: 5px;
+  }
+}
+
+.faq__search {
+  @media (min-width: 1200px) {
+    margin-left: auto;
+  }
+}
+
+.card-faq__arrow {
+  font-size: 16px;
+  margin-top: 5px;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
   }
 }

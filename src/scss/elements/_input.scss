@@ -4,7 +4,7 @@ input[type='password'],
 input[type='tel'] {
   display: block;
   width: 100%;
-  padding: 5px 12px 5px 34px;
+  padding: 5px 12px;
   color: $black;
   font-size: 16px;
   font-weight: 400;
@@ -30,7 +30,7 @@ input[type='tel'] {
   }
 
   @media (min-width: 1200px) {
-    padding: 8px 20px 8px 50px;
+    padding: 8px 20px;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -38,7 +38,17 @@ input[type='tel'] {
   }
 }
 
-input[type='text'] {
+input.input--login,
+input.input--email,
+input.input--password {
+  padding: 5px 12px 5px 34px;
+
+  @media (min-width: 1200px) {
+    padding: 8px 20px 8px 50px;
+  }
+}
+
+.input--login {
   background-image: url('/img/icon/user.svg');
   background-repeat: no-repeat;
   background-position: 12px center;
@@ -50,7 +60,7 @@ input[type='text'] {
   }
 }
 
-input[type='email'] {
+.input--email {
   background-image: url('/img/icon/mail.svg');
   background-repeat: no-repeat;
   background-position: 12px center;
@@ -62,7 +72,7 @@ input[type='email'] {
   }
 }
 
-input[type='password'] {
+.input--password {
   background-image: url('/img/icon/lock.svg');
   background-repeat: no-repeat;
   background-position: 13px center;

@@ -1,0 +1,17 @@
+.form-search {
+  position: relative;
+}
+
+.form-search__button {
+  padding: 6px;
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  transition: 0.3s all ease;
+
+  &:hover {
+    color: $primary;
+  }
+}

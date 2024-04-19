@@ -6,6 +6,7 @@ block content
   section.faq
     .faq__header
       h1.title-h3.faq__title Поддержка пользователей
+      +form-search.faq__search
       button.btn.btn--secondary.btn--outline.faq__btn Мои сообщения
     each item, index in faq
       +card-faq(item, index + 1)
