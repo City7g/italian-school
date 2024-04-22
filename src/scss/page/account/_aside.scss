@@ -3,7 +3,7 @@
   top: 0;
   min-height: 100vh;
   padding: 80px 44px 60px 56px;
-  border-right: 1px solid $text;
+  background-color: $white;
 
   @media (max-width: 1199px) {
     display: none;
@@ -11,6 +11,7 @@
 
   @media (min-width: 1200px) {
     padding: 20px 30px 40px 120px;
+    border-right: 1px solid $text;
   }
 }
 
@@ -26,6 +27,18 @@
 
   @media (max-width: 1199px) {
     display: none;
+  }
+}
+
+.acc-aside__user {
+  margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 50px;
   }
 }
 

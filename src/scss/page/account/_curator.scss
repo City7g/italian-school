@@ -19,10 +19,15 @@
 .curator__data .icon-cheveron-left,
 .curator__data .icon-cheveron-right {
   color: #d8d8d8;
-  transition: 0.3s all ease;
   cursor: pointer;
+  transition: 0.3s all ease;
 
   &:hover {
     color: $primary;
   }
+}
+
+.curator__data-month {
+  flex: 0 0 100px;
+  justify-self: center;
 }

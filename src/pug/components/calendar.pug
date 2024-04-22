@@ -9,6 +9,7 @@ mixin calendar
       each day in dayOfWeek
         p.text-p2.calendar__head= day
     .calendar__days
+      .calendar__day-space
       - for (var x = 1; x < 31; x++)
         if x === 1
           .calendar__day.calendar__day--disable
