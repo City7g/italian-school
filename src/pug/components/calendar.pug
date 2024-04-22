@@ -1,0 +1,31 @@
+- const dayOfWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+
+mixin calendar
+  - const currentDate = new Date()
+  - const currentDay = currentDate.getDate()
+
+  .calendar&attributes(attributes)
+    .calendar__header
+      each day in dayOfWeek
+        p.text-p2.calendar__head= day
+    .calendar__days
+      - for (var x = 1; x < 31; x++)
+        if x === 1
+          .calendar__day.calendar__day--disable
+            p.title-h3.calendar__day-number= x
+        else if x === 13 || x === 16
+          .calendar__day.calendar__day--lesson
+            p.title-h3.calendar__day-number= x
+            img.calendar__day-lesson-img(src="/img/account/lesson.svg" alt="")
+        else if currentDay === x
+          .calendar__day.calendar__day--current
+            p.title-h3.calendar__day-number= x
+            .text-p4.calendar__day-add
+              i.icon-add-outline
+              p Добавить занятие
+        else
+          .calendar__day
+            p.title-h3.calendar__day-number= x
+            .text-p4.calendar__day-add
+              i.icon-add-outline
+              p Добавить занятие

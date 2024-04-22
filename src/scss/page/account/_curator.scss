@@ -1,7 +1,28 @@
 .curator__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 24px;
 
   @media (min-width: 1200px) {
     margin-bottom: 32px;
+  }
+}
+
+.curator__data {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.curator__data .icon-cheveron-left,
+.curator__data .icon-cheveron-right {
+  color: #d8d8d8;
+  transition: 0.3s all ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary;
   }
 }

@@ -1,0 +1,111 @@
+.calendar {
+  padding: 8px 20px 12px;
+  background-color: #f7f7f7;
+
+  @media (min-width: 768px) {
+    padding: 20px 40px 28px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 24px 48px 40px;
+  }
+}
+
+.calendar__header,
+.calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.calendar__header {
+  text-align: right;
+  margin-bottom: 6px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.calendar__head {
+  padding: 0 6px;
+
+  @media (min-width: 768px) {
+    padding: 0 12px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 18px;
+  }
+}
+
+.calendar__day {
+  padding: 4px 6px;
+  background-color: $white;
+  border-radius: $radius;
+  transition: 0.3s all ease;
+  border: 1px solid transparent;
+  aspect-ratio: 1 / 0.85;
+
+  @media (min-width: 768px) {
+    padding: 10px 15px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 12px 18px;
+  }
+
+  &:not(.calendar__day--disable):hover {
+    border-color: $text;
+  }
+}
+
+.calendar__day-number {
+  @media (max-width: 575px) {
+    font-size: 10px;
+  }
+}
+
+.calendar__day--current {
+  color: $primary;
+}
+
+.calendar__day--lesson {
+  border-color: $primary;
+  background-color: rgba($primary, 0.2);
+}
+
+.calendar__day-lesson-img {
+  width: 14px;
+  display: block;
+
+  @media (min-width: 768px) {
+    width: 30px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 36px;
+  }
+}
+
+.calendar__day--disable {
+  opacity: 0.5;
+}
+
+.calendar__day-add {
+  display: none;
+  text-align: center;
+  color: $primary;
+  line-height: 1;
+  margin-top: -15px;
+}
+
+.calendar__day:hover .calendar__day-add {
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+
+.calendar__day-add i {
+  font-size: 20px;
+}
