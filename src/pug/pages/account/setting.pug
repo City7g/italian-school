@@ -1,0 +1,31 @@
+extends ../../layouts/acc
+
+block content
+  section.setting
+    h1.title-h3.setting__title Настройки профиля
+    form.setting__wrap
+      img(src="/img/account/setting.jpeg" alt="")
+      input(type='text' placeholder='Дмитрий')
+      input(type='text' placeholder='Релик')
+      input.input--tel(type='tel' placeholder='+7 (068) 104 - 11 - 22')
+      p.setting__socials Ваши соц. сети
+
+      p.setting__heading Изменение пароля
+      input.input--password(type='password' placeholder='Старый пароль')
+      input.input--password(type='text' placeholder='Новый пароль')
+      input.input--email(type='email' placeholder='Dinrelik@gmail.com')
+      button.btn.setting__btn(disabled) Сохранить изменения
+
+    h1.title-h3.setting__title Настройки уведомлений
+    .setting__notification
+      img.setting__notification-img(src='/img/account/setting.svg' alt='')
+      form.setting__notification-content
+        label
+          p.title-h4 Уведомления о занятиях
+          input(type='checkbox' role='switch')
+        label
+          p.title-h4 Ежедневная рассылка
+          input(type='checkbox' role='switch')
+        label
+          p.title-h4 Уведомления о новостях
+          input(type='checkbox' role='switch')

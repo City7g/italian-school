@@ -40,7 +40,8 @@ input[type='tel'] {
 
 input.input--login,
 input.input--email,
-input.input--password {
+input.input--password,
+input.input--tel {
   padding: 5px 12px 5px 34px;
 
   @media (min-width: 1200px) {
@@ -82,6 +83,18 @@ input.input--password {
     background-repeat: no-repeat;
     background-position: 25px center;
     background-size: 13px 17px;
+  }
+}
+
+.input--tel {
+  background-image: url('/img/icon/tel.svg');
+  background-repeat: no-repeat;
+  background-position: 13px center;
+  background-size: 10px 17px;
+
+  @media (min-width: 1200px) {
+    background-position: 16px center;
+    background-size: 13px 23px;
   }
 }
 
