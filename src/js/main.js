@@ -181,6 +181,13 @@ popups.forEach(popup => {
   })
 })
 
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    showBodyScroll()
+    closeAllPopups()
+  }
+})
+
 document
   .querySelectorAll('.popup .popup__bg, .popup .popup__close')
   .forEach(popup => {

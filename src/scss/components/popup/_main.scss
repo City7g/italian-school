@@ -43,6 +43,7 @@
   padding: 110px 65px;
   background-color: $white;
   transform: translateX(100%);
+  overflow: auto;
   transition: 0.3s;
   transition-behavior: allow-discrete;
 
@@ -61,6 +62,10 @@
   @media (max-width: 320px) {
     padding: 70px 20px;
   }
+}
+
+.popup__wrap-wide {
+  padding: 48px 120px 60px 60px;
 }
 
 .popup.active .popup__wrap {
@@ -111,7 +116,7 @@
   }
 }
 
-.popup__content {
+.popup__content--form {
   max-width: 310px;
   margin: 0 auto;
 }
