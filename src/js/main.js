@@ -138,7 +138,9 @@ const closeAllPopups = () => {
   document.querySelectorAll('.popup').forEach(p => {
     p.classList.remove('active')
   })
-  document.querySelector('.header__menu').classList.remove('active')
+  if (document.querySelector('.header__menu')) {
+    document.querySelector('.header__menu').classList.remove('active')
+  }
 }
 
 const openPopup = id => {
@@ -159,6 +161,8 @@ const showBodyScroll = () => {
 
 const popups = document.querySelectorAll('[data-popup]')
 
+console.log(popups)
+
 popups.forEach(popup => {
   popup.addEventListener('click', e => {
     e.preventDefault()
@@ -166,6 +170,8 @@ popups.forEach(popup => {
     const needPopup = document.querySelector(
       `#${popup.getAttribute('data-popup')}`
     )
+
+    console.log(needPopup)
 
     if (needPopup) {
       hideBodyScroll()

@@ -1,0 +1,26 @@
+extends ../../layouts/acc
+
+block content
+  img(src='/img/head/blog.svg' alt='')
+  section.level-page
+    h1.level-page__title А ты уже знаешь свой уровень?
+
+    .level-page__list
+      .level
+        img.level__img(src='/img/account/level-teacher.svg' alt='')
+        h2.title-h3.level__title Определить с помощью преподавателя
+        p.text-p4.level__text Во время пробного занятия преподаватель может определить ваш уровень и составить учебный план.
+        .btn.level__btn Пробное занятие
+
+      .level
+        img.level__img(src='/img/account/level-self.svg' alt='')
+        h2.title-h3.level__title Да знаю...<br>И выберу сам!
+        p.text-p4.level__text Если вы примерно знаете, какой у вас уровень - выберите его из списка.<br>Это ни к чему не обязывает, но облегчит нам подготовку к занятию.
+        .level__bottom
+          p.title-h4 Мой уровень:
+
+          select
+            option A1
+            option A2
+            option B1
+            option B2

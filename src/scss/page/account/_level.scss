@@ -1,0 +1,52 @@
+.level-page {
+}
+
+.level-page__title {
+  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+  }
+}
+
+.level-page__list {
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1200px) {
+    gap: 30px;
+  }
+}
+
+.level {
+  padding: 24px 32px 28px;
+  background: $bg;
+  border-radius: $radius;
+}
+
+.level__img {
+  margin-bottom: 16px;
+}
+
+.level__title {
+  margin-bottom: 10px;
+}
+
+.level__btn {
+  margin-top: 16px;
+
+  @media (min-width: 768px) {
+    margin-top: 32px;
+  }
+}
+
+.level__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
