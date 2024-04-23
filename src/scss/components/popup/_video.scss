@@ -5,3 +5,19 @@
     margin-bottom: 32px;
   }
 }
+
+.popup-video__title span {
+  margin-left: 10px;
+}
+
+.popup-video__video {
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.popup-video__heading {
+  margin-bottom: 15px;
+}
