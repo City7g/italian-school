@@ -29,7 +29,11 @@ html(lang="en")
     meta(name="description" content="Account page")
     include ../utils/og
     meta(name="theme-color" content="#000000")
-  body.grid
+    link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png')
+    link(rel='icon' href='/icon.svg' type='image/svg+xml')
+
+  body
     .acc__header-wrap
       include ../components/header/account
 
@@ -40,7 +44,6 @@ html(lang="en")
 
     //- include ../components/footer
 
-    //- include ../components/popup/login
-    //- include ../components/popup/register
+    include ../components/popup/video
 
     script(src="/main.js") 
