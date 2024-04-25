@@ -1,44 +1,118 @@
+@use 'sass:color';
+
+@mixin button-bg($color) {
+  color: $white;
+  border-color: $color;
+  background-color: $color;
+
+  @media (pointer: fine) {
+    &:hover {
+      color: $white;
+      border-color: darken($color, 5);
+      background-color: darken($color, 5);
+    }
+  }
+
+  &:focus-visible {
+    color: $white;
+    border-color: darken($color, 5);
+    background-color: darken($color, 5);
+    outline-color: darken($color, 5);
+    box-shadow: 0 0 0 3px rgba($color, 0.25);
+  }
+
+  &:active {
+    color: $white;
+    border-color: darken($color, 10);
+    background-color: darken($color, 10);
+  }
+
+  &:disabled {
+    color: $white;
+    border-color: transparent;
+    background-color: rgba($color, 0.5);
+  }
+}
+
+@mixin button-outline($color) {
+  color: $color;
+  border-color: $color;
+  background-color: $white;
+
+  @media (pointer: fine) {
+    &:hover {
+      color: $white;
+      border-color: $color;
+      background-color: $color;
+    }
+  }
+
+  &:focus-visible {
+    color: $white;
+    border-color: darken($color, 5);
+    background-color: darken($color, 5);
+    outline-color: darken($color, 5);
+    box-shadow: 0 0 0 3px rgba($color, 0.25);
+  }
+
+  &:active {
+    color: $white;
+    border-color: darken($color, 10);
+    background-color: darken($color, 10);
+  }
+
+  &:disabled {
+    color: rgba($color, 0.5);
+    border-color: rgba($color, 0.5);
+    background-color: $white;
+  }
+}
+
 .btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
   padding: 6px 25px;
-  color: $white;
+  color: $black;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.3;
   white-space: nowrap;
   text-align: center;
-  border: 1px solid $primary;
+  border: 1px solid $black;
   border-radius: $radius;
-  background-color: $primary;
-  transition: 0.3s all ease;
+  background-color: $white;
+  transition: 0.3s ease;
+  transition-property: border-color, color, background-color;
+  -webkit-tap-highlight-color: transparent;
 
-  &:hover {
-    color: $white;
-    border-color: darken($primary, 5);
-    background-color: darken($primary, 5);
+  @media (pointer: fine) {
+    &:hover {
+      color: $primary;
+      border-color: $primary;
+    }
   }
 
   &:focus-visible {
-    color: $white;
-    border-color: darken($primary, 5);
-    background-color: darken($primary, 5);
-    outline: none;
-    box-shadow: 0 0 0 6px rgba($primary, 0.25);
+    color: $primary;
+    border-color: $primary;
+    background-color: $white;
+    outline: 1px solid $primary;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px rgba($primary, 0.25);
   }
 
   &:active {
-    color: $white;
+    color: darken($primary, 10);
     border-color: darken($primary, 10);
-    background-color: darken($primary, 10);
+    background-color: $white;
   }
 
   &:disabled {
-    color: $white;
-    border-color: transparent;
-    background-color: rgba($primary, 0.3);
+    color: rgba($black, 0.5);
+    border-color: rgba($black, 0.5);
+    background-color: $white;
   }
 
   @media (min-width: 1200px) {
@@ -51,101 +125,23 @@
   }
 }
 
+.btn--primary {
+  @include button-bg($primary);
+}
+
 .btn--secondary {
-  border-color: $secondary;
-  background-color: $secondary;
+  @include button-bg($secondary);
+}
 
-  &:hover {
-    color: $white;
-    border-color: darken($secondary, 5);
-    background-color: darken($secondary, 5);
-  }
+.btn--outline-primary {
+  @include button-outline($primary);
+}
 
-  &:focus-visible {
-    border-color: darken($secondary, 5);
-    background-color: darken($secondary, 5);
-    box-shadow: 0 0 0 6px rgba($secondary, 0.25);
-  }
-
-  &:active {
-    color: $white;
-    border-color: darken($secondary, 10);
-    background-color: darken($secondary, 10);
-  }
-
-  &:disabled {
-    color: $white;
-    border-color: transparent;
-    background-color: rgba($secondary, 0.3);
-  }
+.btn--outline-secondary {
+  @include button-outline($secondary);
 }
 
 .btn__icon {
   font-size: 20px;
   transition: 0.3s all ease;
-}
-
-.btn--outline {
-  color: $primary;
-  background-color: transparent;
-
-  &:hover {
-    color: $white;
-  }
-
-  &:disabled {
-    color: rgba($primary, 0.3);
-    border-color: rgba($primary, 0.3);
-    background-color: transparent;
-  }
-
-  &:focus-visible {
-    color: $white;
-    border-color: darken($primary, 5);
-    background-color: darken($primary, 5);
-    box-shadow: 0 0 0 6px rgba($primary, 0.25);
-  }
-}
-
-.btn--outline .btn__icon {
-  color: $primary;
-}
-
-.btn--outline:hover .btn__icon {
-  color: $white;
-}
-
-.btn--outline.btn--secondary {
-  color: $secondary;
-  border-color: $secondary;
-
-  &:hover,
-  &:active {
-    color: $white;
-  }
-
-  &:disabled {
-    color: rgba($secondary, 0.3);
-    border-color: rgba($secondary, 0.3);
-    background-color: transparent;
-  }
-
-  &:focus-visible {
-    color: $white;
-    border-color: darken($secondary, 5);
-    background-color: darken($secondary, 5);
-    box-shadow: 0 0 0 6px rgba($secondary, 0.25);
-  }
-}
-
-.btn--transparent {
-  color: $black;
-  border-color: $black;
-  background-color: transparent;
-
-  &:hover {
-    color: $primary;
-    border-color: $primary;
-    background-color: transparent;
-  }
 }
