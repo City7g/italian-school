@@ -3,8 +3,9 @@ extends ../../layouts/acc
 block content
   section.group
     .group__header
-      a(href="/account/group").btn.btn--outline Курсы
-      .btn Вебинары
+      .group__header-btns
+        a(href="/account/group").btn.btn--outline-primary Курсы
+        .btn.btn--primary Вебинары
       select
         option Все курсы
         option Мои курсы

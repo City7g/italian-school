@@ -22,6 +22,7 @@
 
   @media (max-width: 359px) {
     grid-template-columns: 1fr auto auto;
+    gap: 10px;
   }
 }
 
@@ -87,12 +88,12 @@
   flex-direction: column;
   gap: 10px;
 
-  @media (max-width: 575px) {
+  @media (max-width: 767px) {
     grid-column: 1 / -1;
   }
 
   @media (min-width: 576px) {
-    gap: 15px;
+    gap: 12px;
   }
 
   @media (min-width: 768px) {
@@ -132,6 +133,7 @@
 .card-curator__arrow {
   cursor: pointer;
   transition: 0.3s all ease;
+  -webkit-tap-highlight-color: rgba($primary, 0.2);
 
   @media (pointer: fine) {
     &:hover {
