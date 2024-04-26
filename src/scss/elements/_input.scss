@@ -4,7 +4,7 @@ input[type='password'],
 input[type='tel'] {
   display: block;
   width: 100%;
-  padding: $padding-select;
+  padding: $p-y $p-x;
   color: $black;
   font-size: 12px;
   font-weight: 400;
@@ -38,14 +38,22 @@ input[type='tel'] {
   }
 }
 
+input.input--lg {
+  padding: $p-y-lg-mb $p-x-lg-mb;
+
+  @media (min-width: 768px) {
+    padding: $p-y-lg $p-x-lg;
+  }
+}
+
 input.input--login,
 input.input--email,
 input.input--password,
 input.input--tel {
-  padding: 5px 12px 5px 34px;
+  padding: $p-y-lg-mb $p-x-lg-mb $p-y-lg-mb $p-x-wide-mb;
 
-  @media (min-width: 1200px) {
-    padding: 8px 20px 8px 50px;
+  @media (min-width: 768px) {
+    padding: $p-y-lg $p-x-lg $p-y-lg $p-x-wide;
   }
 }
 
@@ -86,7 +94,7 @@ input.input--tel {
   }
 }
 
-.input--tel {
+input.input--tel {
   background-image: url('/img/icon/tel.svg');
   background-repeat: no-repeat;
   background-position: 13px center;

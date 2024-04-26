@@ -73,7 +73,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  padding: $padding-btn;
+  padding: $p-y $p-x;
   color: $black;
   font-size: 12px;
   font-weight: 700;
@@ -125,10 +125,18 @@
 }
 
 .btn--lg {
-  padding: $padding-btn-lg-mb;
+  padding: $p-y-lg-mb $p-x-lg-mb;
 
   @media (min-width: 1200px) {
-    padding: $padding-btn-lg;
+    padding: $p-y-lg $p-x-lg;
+  }
+}
+
+.btn--wide {
+  padding: $p-y-lg-mb $p-x-wide-mb;
+
+  @media (min-width: 1200px) {
+    padding: $p-y-lg $p-x-wide;
   }
 }
 

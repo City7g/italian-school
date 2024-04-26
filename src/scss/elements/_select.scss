@@ -1,6 +1,6 @@
 select {
   display: block;
-  padding: $padding-select;
+  padding: $p-y $p-x-wide-mb $p-y $p-x;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.3;
@@ -37,9 +37,9 @@ select {
 }
 
 .select--lg {
-  padding: $padding-select-lg-mb;
+  padding: $p-y-lg-mb $p-x-wide-mb $p-y-lg-mb $p-x-lg-mb;
 
-  @media (min-width: 1200px) {
-    padding: $padding-select-lg;
+  @media (min-width: 768px) {
+    padding: $p-y-lg $p-x-wide $p-y-lg $p-x-lg;
   }
 }
