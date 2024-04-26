@@ -1,5 +1,9 @@
 extends ../../layouts/acc
 
+block variables
+  - const title = 'Select curator'
+  - const page = 'curators'
+
 block content
   section.curator
     .curator__header
@@ -9,5 +13,5 @@ block content
       button.btn Время
       button.btn Мои преподаватели
     .curator__list
-    - for (var x = 1; x < 7; x++)
-      +card-curator(x)
+      - for (var x = 1; x < 7; x++)
+        +card-curator(x)

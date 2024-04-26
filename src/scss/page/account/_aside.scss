@@ -53,6 +53,10 @@
   padding-left: 40px;
 }
 
+.acc-aside__link.active {
+  color: $primary;
+}
+
 .acc-aside__link img {
   position: absolute;
   top: 50%;

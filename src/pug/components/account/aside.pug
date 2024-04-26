@@ -5,21 +5,21 @@ aside.acc-aside
 
   +card-user.acc-aside__user
   .acc-aside__links
-    a(href="/account/group").title-h3.link-primary.acc-aside__link
+    a.title-h3.link-primary.acc-aside__link(href="/account/group")
       img(src="/img/account/group.svg" alt="")
       | Груповые занятия
-    a(href="/account/curators").title-h3.link-primary.acc-aside__link
+    a.title-h3.link-primary.acc-aside__link(href="/account/curators" class=`${page === 'curators' ? 'active' : ''}`)
       img(src="/img/account/vine.svg" alt="")
       | Преподаватели
-    a(href="/account/calendar").title-h3.link-primary.acc-aside__link
+    a.title-h3.link-primary.acc-aside__link(href="/account/calendar")
       img(src="/img/account/diamond.svg" alt="")
       | Мой календарь
-    a(href="/account/setting").title-h3.link-primary.acc-aside__link
+    a.title-h3.link-primary.acc-aside__link(href="/account/setting")
       img(src="/img/account/queen.svg" alt="")
       | Настройки
-    a(href="/account/faq").title-h3.link-primary.acc-aside__link
+    a.title-h3.link-primary.acc-aside__link(href="/account/faq")
       img(src="/img/account/mail.svg" alt="")
       | Поддержка
-    a(href="/").title-h3.link-primary.acc-aside__link
+    a.title-h3.link-primary.acc-aside__link(href="/")
       img(src="/img/account/back.svg" alt="")
       | Выйти
