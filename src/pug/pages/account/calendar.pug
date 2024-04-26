@@ -1,13 +1,19 @@
 extends ../../layouts/acc
 
 block content
+  - const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+
   section.curator
     .curator__header
       h1.title-h3.curator__title Выберите дату занятия
 
       .curator__data
         .icon-cheveron-left
-        p.title-h3.curator__data-month Апрель
+        each month, index in months
+          if new Date().getMonth() === index
+            p.title-h3.curator__data-month.active= month
+          else
+            p.title-h3.curator__data-month= month
         .icon-cheveron-right
 
     +calendar

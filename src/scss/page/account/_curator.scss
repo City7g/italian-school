@@ -51,6 +51,11 @@
 }
 
 .curator__data-month {
+  display: none;
   flex: 0 0 100px;
   justify-self: center;
+}
+
+.curator__data-month.active {
+  display: block;
 }

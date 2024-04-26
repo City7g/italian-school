@@ -37,9 +37,9 @@ select {
 }
 
 .select--lg {
-  // padding: $padding-select-el-mb;paddingpadding
+  padding: $padding-select-lg-mb;
 
   @media (min-width: 1200px) {
-    // padding: $padding-lg-el;paddingpadding
+    padding: $padding-select-lg;
   }
 }

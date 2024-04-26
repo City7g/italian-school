@@ -71,6 +71,10 @@
   @media (min-width: 1200px) {
     padding: 20px 30px 80px;
   }
+
+  @media (max-width: 359px) {
+    padding: 60px 12px 30px;
+  }
 }
 
 .acc-notifications {

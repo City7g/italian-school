@@ -13,6 +13,10 @@
     padding: 20px 30px 40px 120px;
     border-right: 1px solid $text;
   }
+
+  @media (max-width: 359px) {
+    padding: 70px 20px 40px 20px;
+  }
 }
 
 .acc-aside.active {
