@@ -1,9 +1,19 @@
 .acc-aside {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 420px;
+  max-width: 100%;
   min-height: 100vh;
+  overflow: auto;
+  overscroll-behavior: contain;
   padding: 80px 44px 60px 56px;
   background-color: $white;
+  transform: translateX(-100%);
+  transition: 0.3s;
+  transition-behavior: allow-discrete;
 
   @media (max-width: 1199px) {
     display: none;
@@ -21,6 +31,11 @@
 
 .acc-aside.active {
   display: block;
+  transform: translateX(0);
+
+  @starting-style {
+    transform: translateX(-100%);
+  }
 }
 
 .acc-aside__header {
