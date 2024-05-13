@@ -13,8 +13,4 @@ block content
       img.faq__empty-img(src="/img/account/faq.svg" alt="")
       h1.title-h3.faq__empty-title У вас ещё нет сообщений.
       p.text-p2.faq__empty-text Если у вас есть вопросы, замечания, пожелания, вы просто хотите поговорить - напишите нам!
-      button.btn.faq__empty-btn Задать вопрос в поддержку
-
-    .faq__list
-      each item, index in faq
-        +card-faq(item, index + 1)
+      button.btn.btn--primary.btn--lg.faq__empty-btn Задать вопрос в поддержку

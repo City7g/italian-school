@@ -11,12 +11,12 @@
   overscroll-behavior: contain;
   padding: 80px 44px 60px 56px;
   background-color: $white;
-  transform: translateX(-100%);
-  transition: 0.3s;
-  transition-behavior: allow-discrete;
 
   @media (max-width: 1199px) {
     display: none;
+    transform: translateX(-100%);
+    transition: 0.3s;
+    transition-behavior: allow-discrete;
   }
 
   @media (min-width: 1200px) {
